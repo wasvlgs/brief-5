@@ -54,11 +54,6 @@ buttonOrders.onclick = ()=>{
     }else{
         OrderList.style.width = "100%";
         OrderList.style.border = "4px solid white";
-        listNavbar.style.width = "0%";
-        searchInput.style.height = "0px";
-        searchInput.style.border = "none";
-
-
     }
 }
 
