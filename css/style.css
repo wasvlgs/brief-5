@@ -16,13 +16,22 @@
 body{
     width: 100%;
     height: 100%;
+    font-family: "Poppins", serif;
 }
 
 
+header div:first-of-type div:last-of-type > i{
+    display: none;
+}
 
 
-header{
-    width: 100%;
-    height: 120px;
-    background-color: red;
+footer .payMethod img{
+    max-width: 68px;
+    max-height: 50px;
+}
+
+@media (max-width:1023px){
+    header div:first-of-type div:last-of-type > i{
+        display: block;
+    }
 }
