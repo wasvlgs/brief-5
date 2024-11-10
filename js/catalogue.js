@@ -10,7 +10,7 @@ const products = [
     { name: "Smartwatch Plus", price: "$250", description: "Fitness tracking", image: "https://via.placeholder.com/150", icon: "⌚" },
     { name: "Gaming Console", price: "$500", description: "4K gaming", image: "https://via.placeholder.com/150", icon: "🎮" },
     { name: "Bluetooth Speaker", price: "$120", description: "Water-resistant", image: "https://via.placeholder.com/150", icon: "🔊" },
-    { name: "External Hard Drive", price: "$100", description: "1TB storage", image: "https://via.placeholder.com/150", icon: "💾" }
+    { name: "External Hard Drive", price: "$100", description: "1TB storage", image: "https://via.placeholder.com/120", icon: "💾" }
 ];
 
 
