@@ -68,19 +68,19 @@
 
             <h1 class="text-mainColor text-4xl font-semibold">Contact us</h1>
 
-            <form class="flex flex-col items-center gap-5">
+            <form id="getForm" class="flex flex-col items-center gap-5">
 
                 <div class="flex justify-between w-full max-sm:flex-col max-sm:gap-5">
-                    <label class="bg-white rounded-[25px] h-[45px] flex items-center w-[48%] max-sm:w-full"><i class="fa-solid fa-user text-[#636363] px-3"></i><input class="border-none outline-none bg-transparent h-full w-[80%]" type="text" placeholder="First Name"></label>
+                    <label class="bg-white rounded-[25px] h-[45px] flex items-center w-[48%] max-sm:w-full"><i class="fa-solid fa-user text-[#636363] px-3"></i><input id="getFirstName" class="border-none outline-none bg-transparent h-full w-[80%]" type="text" placeholder="First Name"></label>
 
-                    <label class="bg-white rounded-[25px] h-[45px] flex items-center w-[48%] max-sm:w-full"><i class="fa-solid fa-user text-[#636363] px-3"></i><input class="border-none outline-none bg-transparent h-full w-[80%]" type="text" placeholder="Last Name"></label>
+                    <label class="bg-white rounded-[25px] h-[45px] flex items-center w-[48%] max-sm:w-full"><i class="fa-solid fa-user text-[#636363] px-3"></i><input id="getLastName" class="border-none outline-none bg-transparent h-full w-[80%]" type="text" placeholder="Last Name"></label>
                 </div>
                 <div class="flex justify-between w-full max-sm:flex-col max-sm:gap-5">
-                    <label  class="bg-white rounded-[25px] h-[45px] flex items-center w-[48%] max-sm:w-full"><i class="fa-solid fa-envelope text-[#636363] px-3"></i><input class="border-none outline-none bg-transparent h-full w-[80%]"  type="email" placeholder="Email"></label>
+                    <label  class="bg-white rounded-[25px] h-[45px] flex items-center w-[48%] max-sm:w-full"><i class="fa-solid fa-envelope text-[#636363] px-3"></i><input id="getEmail" class="border-none outline-none bg-transparent h-full w-[80%]"  type="email" placeholder="Email"></label>
 
-                    <label  class="bg-white rounded-[25px] h-[45px] flex items-center w-[48%] max-sm:w-full"><i class="fa-solid fa-phone text-[#636363] px-3"></i><input class="border-none outline-none bg-transparent h-full w-[80%]" type="tel" placeholder="Number"></label>
+                    <label  class="bg-white rounded-[25px] h-[45px] flex items-center w-[48%] max-sm:w-full"><i class="fa-solid fa-phone text-[#636363] px-3"></i><input id="getNumber" class="border-none outline-none bg-transparent h-full w-[80%]" type="tel" placeholder="Number"></label>
                 </div>
-                <label class="w-full h-[120px] overflow-hidden rounded-[20px]"><textarea class="resize-none w-full h-full p-3 border-none outline-none" placeholder="Message"></textarea></label>
+                <label class="w-full h-[120px] overflow-hidden rounded-[20px]"><textarea class="resize-none w-full h-full p-3 border-none outline-none" placeholder="Message" id="getMessage"></textarea></label>
 
                 <button type="submit" class="w-[200px] h-[50px] bg-titleColor rounded-[25px] text-white mt-3 max-sm:w-[150px] max-sm:h-[40px] max-sm:text-sm  ">Send Message</button>
 
