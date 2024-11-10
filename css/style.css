@@ -20,7 +20,7 @@ body{
 }
 
 
-header div:first-of-type div:last-of-type > i{
+header div:first-of-type > .buttonsHeader > i{
     display: none;
 }
 

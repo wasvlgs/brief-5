@@ -1,0 +1,16 @@
+
+:root{
+    --mainColor: #134B70;
+    --titleColor: #0F67B1;
+}
+
+
+
+body{
+    background: linear-gradient(13deg, rgb(114, 175, 227) 35%, rgba(255,255,255,1) 100%);
+}
+
+
+form label{
+    box-shadow: 0px 0px 8px 0px var(--titleColor);
+}
