@@ -7,58 +7,85 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/about.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .shadow-extra-dark {
+          box-shadow: 45px 45px 70px rgba(0, 0, 0, 0.9);
+        }   
+    </style>
 </head>
-<body>
-    <section class="Hero bg-[url('/img/hero-about.svg')] bg-cover bg-center h-screen">
+<body class="flex flex-col items-center w-screen p-0 gap-14 ">
+    <!-- Start hero Section: the image , the values -->
+    <section class="flex flex-col items-center">
+        <div><img class="w-full" src="/img/hero-about.svg" alt="Online shopping"></div>
+        <div class="values bg-white relative bottom-4 flex  justify-center shadow-extra-dark overflow-auto max-sm:max-w-[200px]  max-sm:overflow-hidden">
+            <img src="/img/innovation.svg" alt="innovation" class="w-1/4 sm:w-1/8 md:w-1/5">
+            <img src="/img/sustainibilty.svg" alt="sustainibility" class="w-1/4 sm:w-1/8 md:w-1/5">
+            <img src="/img/excellence.svg" alt="excellence" class="w-1/4 sm:w-1/8 md:w-1/5">
+            <img src="/img/integrity.svg" alt="integrity" class="w-1/4 sm:w-1/8 md:w-1/5">
+        </div>
     </section>
-    <section class="values bg-white flex border border-dashed justify-center border-red-700">
-      <img src="/img/innovation.svg" alt="innovation">
-      <img src="/img/sustainibilty.svg" alt="sustainibilty">
-      <img src="/img/excellence.svg" alt="excellence">
-      <img src="/img/integrity.svg" alt="integrity">
-    </section>
-    <section class="about">
-        <h1>About Us</h1>
-        <p>Nexio is more than an electronics company—we’re a vision for the future. Guided by innovation and sustainability, we create technology that empowers and inspires. Each Nexio product is crafted to enhance your life and shape a smarter, greener tomorrow.</p>
-        <div class="flex">
+    <!-- End hero Section: the image , the values -->
+
+
+    <!-- Start about section : heading, text, cards -->
+    <section class="about flex flex-col items-center gap-14 mt-20">
+        <h1 class="text-6xl font-bold text-[#0F67B1]">About Us</h1>
+        <p class="text-center p-2 text-xl">Nexio is more than an electronics company—we’re a vision for the future. Guided by innovation and sustainability, we create technology that empowers and inspires. Each Nexio product is crafted to enhance your life and shape a smarter, greener tomorrow.</p>
+        <div class="grid md:grid-cols-3 sm:grid-cols-1 ">
             <img src="/img/clients.svg" alt="clients">
             <img src="/img/partners.svg" alt="partners">
             <img src="/img/worldwide.svg" alt="worldwide">
         </div>
     </section>
-    <section class="missions flex gap-4">
-        <div class=" border border-dashed border-red-700">
-            <img src="/img/mission.svg" alt="excellent choice">
+    <!-- End about section : heading, text, cards -->
+
+
+    <!-- Start Our missions section : heading, text, cards -->
+    <section class="missions flex flex-col items-center">
+        <div class="text-center flex flex-col gap-6 ">
+            <h1 class="text-6xl font-bold text-[#0F67B1]">Our Missions</h1>
+            <h3>Driven by Purpose, Guided by Innovation</h3>
+            <p>Discover our mission to redefine technology with quality, sustainability, and customer focus at heart.</p>
         </div>
-        <div class=" border border-dashed border-red-700">
-            <h3>1. Deliver Everyday Innovation</h3>
-            <p>To bring advanced, user-friendly technology into daily life.</p>
-            <h3>2. Build for Quality</h3>
-            <p>To uphold high standards in every product, ensuring lasting satisfaction.</p>
-            <h3>3. Promote Sustainability</h3>
-            <p>To integrate eco-friendly materials and processes in all we do.</p>
+        <div class="flex gap-4 sm:flex-wrap">
+            <div class=" border border-dashed border-red-700 ">
+                <img class="w-64" src="/img/mission.svg" alt="excellent choice">
+            </div>
+            <div class=" border border-dashed border-red-700 content-center ">
+                <h3 class="text-l font-bold">1. Deliver Everyday Innovation</h3>
+                <p class="pl-6">To bring advanced, user-friendly technology into daily life.</p>
+                <h3 class="text-l font-bold">2. Build for Quality</h3>
+                <p class="pl-6">To uphold high standards in every product, ensuring lasting satisfaction.</p>
+                <h3 class="text-l font-bold">3. Promote Sustainability</h3>
+                <p class="pl-6">To integrate eco-friendly materials and processes in all we do.</p>
+            </div>
         </div>
     </section>
-    <section class="visions grid grid-cols-4 gap-4 text-center items-center">
-        <div>
-            <img src="/img/leader.svg" alt="leader in tech">
-            <h3>Lead in Technological Innovation</h3>
-            <p>To become a global leader in electronics, delivering groundbreaking technology that shapes the future and inspires our customers worldwide.</p>
-        </div>
-        <div>
-            <img src="/img/quality.svg" alt="quality">
-            <h3>Lead in Technological Innovation</h3>
-            <p>To become a global leader in electronics, delivering groundbreaking technology that shapes the future and inspires our customers worldwide.</p>
-        </div>
-        <div>
-            <img src="/img/customize.svg" alt="customize">
-            <h3>Lead in Technological Innovation</h3>
-            <p>To become a global leader in electronics, delivering groundbreaking technology that shapes the future and inspires our customers worldwide.</p>
-        </div>
-        <div>
-            <img src="/img/sustain.svg" alt="sustainability">
-            <h3>Lead in Technological Innovation</h3>
-            <p>To become a global leader in electronics, delivering groundbreaking technology that shapes the future and inspires our customers worldwide.</p>
+
+    our visions
+    <section class="flex flex-col items-center gap-4">
+        <h1  class="text-6xl font-bold text-blue-400">Our visions</h1>
+        <div class="visions grid grid-cols-4 gap-4 text-center items-center ">
+            <div class="bg-gray-400 pb-10">
+                <img src="/img/leader.svg" alt="leader in tech">
+                <h3 class="font-bold">Lead in Technological Innovation</h3>
+                <p>To become a global leader in electronics, delivering groundbreaking technology that shapes the future and inspires our customers worldwide.</p>
+            </div>
+            <div>
+                <img src="/img/quality.svg" alt="quality">
+                <h3>Lead in Technological Innovation</h3>
+                <p>To become a global leader in electronics, delivering groundbreaking technology that shapes the future and inspires our customers worldwide.</p>
+            </div>
+            <div>
+                <img src="/img/customize.svg" alt="customize">
+                <h3>Lead in Technological Innovation</h3>
+                <p>To become a global leader in electronics, delivering groundbreaking technology that shapes the future and inspires our customers worldwide.</p>
+            </div>
+            <div>
+                <img src="/img/sustain.svg" alt="sustainability">
+                <h3>Lead in Technological Innovation</h3>
+                <p>To become a global leader in electronics, delivering groundbreaking technology that shapes the future and inspires our customers worldwide.</p>
+            </div>
         </div>
     </section>
     <section class="collaborators">
