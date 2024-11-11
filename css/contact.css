@@ -3,6 +3,26 @@
     --mainColor: #134B70;
     --titleColor: #0F67B1;
 }
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #0F67B1; 
+    border-radius: 10px;
+    border: 3px solid #f1f1f1; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0A4D84; 
+}
 
 
 
