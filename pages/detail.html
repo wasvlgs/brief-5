@@ -13,47 +13,63 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <section class="p-10 grid grid-cols-[38%,1fr]">
+
+    <section class="p-2 lg:p-10 grid grid-cols-1 lg:grid-cols-[38%,1fr] gap-6">
       <div class="grid gap-4 p-3">
-        <div class="flex justify-center">
+        <div class="flex justify-center relative">
           <img
-            class="h-auto max-w-full rounded-lg shadow-2xl"
+            id="mainImage"
+            class="h-auto w-full rounded-lg shadow-2xl"
             src="/img/6.jpg"
             alt=""
           />
+
+          <button
+            id="prevBtn"
+            class="absolute left-2 lg:left-4 top-1/2 -translate-y-1/2 w-8 lg:w-10 h-8 lg:h-10 rounded-full bg-black/30 hover:bg-black text-white transition-all duration-300"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            id="nextBtn"
+            class="absolute right-2 lg:right-4 top-1/2 -translate-y-1/2 w-8 lg:w-10 h-8 lg:h-10 rounded-full bg-black/30 hover:bg-black text-white transition-all duration-300"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
-        <div class="grid grid-cols-5 gap-4">
+
+        <div id="thumbnails" class="grid grid-cols-5 gap-2 lg:gap-4">
           <div>
             <img
-              class="h-auto max-w-full rounded-lg shadow-2xl"
+              class="thumbnail h-auto w-full rounded-lg shadow-2xl"
               src="/img/2.jpg"
               alt=""
             />
           </div>
           <div>
             <img
-              class="h-auto max-w-full rounded-lg shadow-2xl"
+              class="thumbnail h-auto w-full rounded-lg shadow-2xl"
               src="/img/3.jpg"
               alt=""
             />
           </div>
           <div>
             <img
-              class="h-auto max-w-full rounded-lg shadow-2xl"
+              class="thumbnail h-auto w-full rounded-lg shadow-2xl"
               src="/img/4.jpg"
               alt=""
             />
           </div>
           <div>
             <img
-              class="h-auto max-w-full rounded-lg shadow-2xl"
+              class="thumbnail h-auto w-full rounded-lg shadow-2xl"
               src="/img/5.jpg"
               alt=""
             />
           </div>
           <div>
             <img
-              class="h-auto max-w-full rounded-lg shadow-2xl"
+              class="thumbnail h-auto w-full rounded-lg shadow-2xl"
               src="/img/1.jpg"
               alt=""
             />
@@ -63,112 +79,111 @@
 
       <div class="p-4 flex flex-col justify-between">
         <div>
-          <h1 class="font-bold text-7xl my-">PLAYSTATION 5</h1>
-          <h3 class="font-semibold text-4xl my-8">
+          <h1 class="font-bold text-2xl lg:text-7xl my-4">PLAYSTATION 5</h1>
+          <h3 class="font-semibold text-md lg:text-4xl my-4 lg:my-8">
             SONY 5DIGITAL EDITION CONSOLE SLIM
           </h3>
-          <h4 class="text-5xl my-8">$599.00</h4>
+          <h4 class="text-xl lg:text-5xl my-4 lg:my-8">$599.00</h4>
         </div>
-        <div class="grid grid-cols-3 gap-10 mt-10">
+        
+        <div class="grid grid-cols-3 sm:grid-cols-3 gap-4 lg:gap-10 mt-6 lg:mt-10">
           <div>
             <span
-              class="text-white bg-blue-500 hover:bg-blue-800 grid shadow-2xl grid-cols-3 font-medium rounded-2xl text-3xl px-5 py-4 me-2 mb-2"
+              class="text-white bg-blue-500 hover:bg-[#134B70] grid shadow-2xl grid-cols-3 font-medium rounded-2xl text-md lg:text-3xl px-4 lg:px-5 py-3 lg:py-4"
             >
-              <button class="mr-10">-</button>
+              <button class="mr-4 lg:mr-10">-</button>
               <h4 class="flex justify-center">1</h4>
-              <button class="ml-10">+</button>
+              <button class="ml-4 lg:ml-10">+</button>
             </span>
           </div>
           <button
-            class="text-white bg-blue-500 hover:bg-blue-800 shadow-2xl font-medium rounded-2xl text-2xl px-5 py-4 me-2 mb-2"
+            class="text-white bg-blue-500 hover:bg-[#134B70] shadow-2xl font-bold rounded-2xl text-[0.7rem] lg:text-2xl px-4 lg:px-5 py-3 lg:py-4"
           >
-            Add to card
+            Add to cart
           </button>
           <button
-            class="text-white bg-blue-500 hover:bg-blue-800 shadow-2xl font-medium rounded-2xl text-2xl px-5 py-4 me-2 mb-2"
+            class="text-white bg-blue-500 hover:bg-[#134B70] shadow-2xl font-bold rounded-2xl text-[0.75rem] lg:text-2xl px-4 lg:px-5 py-3 lg:py-4"
           >
             Customize
           </button>
         </div>
-        <div class="border-solid bg-stone-500 h-0.5 mt-12"></div>
-        <div
-          class="h-40 rounded-3xl shadow-2xl bg-blue-900 mt-12 p-6 text-white"
-        >
-          <h2 class="font-bold text-5xl ml-6">Advantages</h2>
-          <div class="grid grid-cols-3 p-8 text-lg">
+
+        <div class="border-solid bg-stone-500 h-0.5 mt-8 lg:mt-12"></div>
+
+        <div class="rounded-xl lg:rounded-3xl shadow-2xl bg-[#134B70] mt-8 lg:mt-12 p-4 lg:p-6 text-white">
+          <h2 class="font-bold text-center lg:text-left text-2xl lg:text-5xl ml-4 lg:ml-6">Advantages</h2>
+          <div class="flex justify-around lg:justify-between pt-4 gap-4 text-base lg:text-lg">
             <div class="flex items-center gap-2">
               <i class="fa-solid fa-hand-holding-dollar"></i>
-              <h4>Return and Refund</h4>
+              <h4 class="hidden lg:block">Return and Refund</h4>
             </div>
             <div class="flex items-center gap-2">
               <i class="fa-solid fa-award"></i>
-              <h4>1 Year Warranty</h4>
+              <h4 class="hidden lg:block">1 Year Warranty</h4>
             </div>
             <div class="flex items-center gap-2">
               <i class="fa-solid fa-screwdriver-wrench"></i>
-              <h4>After Sales Service</h4>
+              <h4 class="hidden lg:block">After Sales Service</h4>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="m-6 p-10 grid grid-cols-1 gap-8 bg-blue-900 rounded-3xl text-white">
+    <section class="lg:m-6 p-6 m-6 lg:rounded-3xl lg:p-10 grid grid-cols-1 gap-6 lg:gap-8 bg-[#134B70] rounded-xl text-white">
       <div>
-        <h2 class="font-bold text-5xl ml-6">Features</h2>
+        <h2 class="font-bold text-center lg:text-left text-2xl lg:text-5xl ml-4 lg:ml-6">Features</h2>
       </div>
-      <div class="grid grid-cols-2 grid-rows-5 gap-x-10 gap-y-4 text-2xl">
-
-        <div class="flex justify-between">
-          <h4 class="font-semibold">Supplier reference : </h4>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-x-14 lg:gap-y-6 text-[0.6rem] lg:text-2xl">
+        <div class="flex justify-between flex-wrap gap-2">
+          <h4 class="font-semibold">Supplier reference :</h4>
           <p>5DIGITAL EDITION CONSOLE SLIM</p>
         </div>
 
-        <div class="flex justify-between">
+        <div class="flex justify-between flex-wrap gap-2">
           <h4 class="font-semibold">RAM :</h4>
           <p>Non</p>
         </div>
 
-        <div class="flex justify-between">
+        <div class="flex justify-between flex-wrap gap-2">
           <h4 class="font-semibold">Brand :</h4>
           <p>SONY</p>
         </div>
 
-        <div class="flex justify-between">
+        <div class="flex justify-between flex-wrap gap-2">
           <h4 class="font-semibold">Processor :</h4>
           <p>Non</p>
         </div>
 
-        <div class="flex justify-between">
+        <div class="flex justify-between flex-wrap gap-2">
           <h4 class="font-semibold">Hard disk capacity :</h4>
           <p>1000</p>
         </div>
 
-        <div class="flex justify-between">
+        <div class="flex justify-between flex-wrap gap-2">
           <h4 class="font-semibold">Graphics card :</h4>
           <p>Non</p>
         </div>
 
-        <div class="flex justify-between">
+        <div class="flex justify-between flex-wrap gap-2">
           <h4 class="font-semibold">Design :</h4>
           <p>SLIM</p>
         </div>
 
-        <div class="flex justify-between">
+        <div class="flex justify-between flex-wrap gap-2">
           <h4 class="font-semibold">Screen size:</h4>
           <p>Non</p>
         </div>
 
-        <div class="flex justify-between">
+        <div class="flex justify-between flex-wrap gap-2">
           <h4 class="font-semibold">Operating system :</h4>
           <p>Non</p>
         </div>
 
-        <div class="flex justify-between">
+        <div class="flex justify-between flex-wrap gap-2">
           <h4 class="font-semibold">Ratings :</h4>
           <p>4.8</p>
         </div>
-
       </div>
     </section>
 

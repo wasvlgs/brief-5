@@ -1,0 +1,10 @@
+.thumbnail-active {
+    border: 3px solid #134B70;
+    border-radius: 0.5rem;
+}
+#mainImage {
+    transition: opacity 0.3s ease;
+}
+.fade-out {
+    opacity: 0;
+}
