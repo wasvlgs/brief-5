@@ -14,7 +14,12 @@
     <style>
         .shadow-extra-dark {
           box-shadow: 45px 45px 70px rgba(0, 0, 0, 0.9);
-        }  
+        } 
+        .slider-images {
+            transition: transform 0.5s ease-in-out;
+        }
+        
+
 
     </style>
 </head>
@@ -145,7 +150,28 @@
             </div>            
         </div>
     </section>
-     
+    <section class="Collabs border border-dashed border-red-700 w-full space-y-8" >
+        <h1 class="text-6xl font-bold text-center text-[#0F67B1]">Meet our collaborators</h1>
+        <p class="text-center p-6 text-xl">At Nexio, our partnerships with top industry leaders drive us to deliver cutting-edge, high-quality technology. Together, we bring you products that redefine innovation and excellence. Meet the brands behind Nexio’s difference</p>
+        <div class="slider-container m-auto max-w-[463px] max-h-[463px] h-full w-full overflow-hidden">
+            <div id="slidemove" class="slider-images flex h-full relative right-0 transition-all duration-500">
+              <img src="/img/AMD.png" alt="Image 1">
+              <img src="/img/foxconn.png" alt="Image 2">
+              <img src="/img/intel.png" alt="Image 3">
+              <img src="/img/snapdragon.png" alt="Image 4">
+            </div>
+        </div>
+            <div class="dots-container text-center flex justify-center  mt-4">
+                <input type="radio" name="nav">
+                <input type="radio" name="nav">
+                <input type="radio" name="nav">
+                <input type="radio" name="nav">
+                <input type="radio" name="nav">
+                <input type="radio" name="nav">
+            </div>
+       
+
+    </section>
     
 
 
@@ -351,5 +377,6 @@
 
     <script src="../js/script.js"></script>
     <script src="../js/about.js"></script>
+    
 </body>
 </html>

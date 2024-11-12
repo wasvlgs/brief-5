@@ -33,3 +33,15 @@ question5.addEventListener("click",()=>{
     answer5.classList.toggle("hidden");
 });
 
+
+
+let slidemove = document.getElementById("slidemove");
+let i = 0;
+
+    setInterval(() => {
+        i += 100;
+        slidemove.style.right = i + "%";
+        if(i > 300){
+            i = -100;
+        }
+    }, 2000);
