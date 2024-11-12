@@ -11,13 +11,12 @@ document.addEventListener("DOMContentLoaded",()=>{
     let buttonNavbar = document.getElementById("buttonNavbar");
     
 
-    buttonNavbar.onclick = ()=>{
-        if(listNavbar.style.width == "100%"){
+   
+    buttonNavbar.onclick = () => {
+        if (listNavbar.style.width == "100%") {
             listNavbar.style.width = "0%";
-        }else{
+        } else {
             listNavbar.style.width = "100%";
-
-
         }
     }
 // ======================== open Search ====================
@@ -53,6 +52,7 @@ buttonOrders.onclick = ()=>{
         OrderList.getElementsByClassName("cardOrders")[0].style.transform = "translate(0%)";
     }
 }
+
 updateCounter();
 ordersCalcule();
 getCountOrder();
