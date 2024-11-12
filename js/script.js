@@ -16,9 +16,6 @@ document.addEventListener("DOMContentLoaded",()=>{
             listNavbar.style.width = "0%";
         }else{
             listNavbar.style.width = "100%";
-            searchInput.style.height = "0px";
-            OrderList.style.width = "0%";
-            searchInput.style.border = "none";
 
 
         }
@@ -36,8 +33,6 @@ document.addEventListener("DOMContentLoaded",()=>{
         }else{
             searchInput.style.height = "50px";
             searchInput.style.border = "2px solid black";
-            listNavbar.style.width = "0%";
-        OrderList.style.width = "0%";
         }
     }
 
