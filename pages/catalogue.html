@@ -54,13 +54,13 @@
 
         </div>
 
-        <div class="w-full h-1/2 flex justify-center items-end">
-            <div class="w-[50%] h-[45px] bg-white rounded-t-[20px]  max-xl:w-[70%] ">
+        <div class=" flex w-full h-1/2  justify-center items-end">
+            <div class=" w-[50%] h-[45px] bg-mainColor lg:bg-white rounded-t-[20px]  max-xl:w-[70%] ">
 
 
                 <ul id="listNavbar"
                     class="w-full h-full flex items-center justify-center gap-20 text-black font-medium max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400">
-                    <li id="buttonCategories" class="hover:text-mainColor cursor-pointer"><img class="bg-mainColor"
+                    <li id="buttonCategories" class="absolute left-20 hover:text-mainColor cursor-pointer">Categories<img class="bg-mainColor"
                             src="../img/Slider.png" alt=""></li>
                     <li><a class="hover:text-mainColor" href="#">Home</a></li>
                     <li><a class="hover:text-mainColor" href="#">Cataloge</a></li>
@@ -72,7 +72,7 @@
 
 
                 <ul id="categoriesDropdown"
-                    class="hidden absolute flex-col gap-2 text-mainColor bg-white  p-4 z-10 rounded-lg">
+                    class="hidden top-[25%] left-3 w-[35vw] h-[50%] absolute flex flex-col justify-evenly gap-2 text-mainColor bg-white  p-4 z-10 rounded-lg ">
                     <li><a href="#">Category 1</a></li>
                     <li><a href="#">Category 2</a></li>
                     <li><a href="#">Category 3</a></li>
@@ -87,8 +87,8 @@
         </div>
 
     </header>
-    <section  aria-label="Image Carousel" >
-        <div class="carousel  h-screen relative">
+    <section id="carouselContent" class="h-[40vh] lg:h-screen"  aria-label="Image Carousel" >
+        <div class="carousel   relative">
             <button class="carousel-btn prev" data-carousel-btn>&#8612;</button>
             <button class="carousel-btn next" data-carousel-btn>&#8614;</button>
             <ul>
@@ -111,7 +111,13 @@
 
 
 
-    <div id="productContainer" class="p-[5.9vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+ 
+    <div class="tabs-container">
+        <div id="productContainer" class="p-[5.9vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <div class="pagination flex justify-center items-center gap-4 mt-4">
+            <span id="pageIndicator" class="text-lg"></span>
+        </div>
+    </div>
 
 
     <div id="OrderList"
@@ -267,10 +273,11 @@
         <div class="col-span-full flex justify-center items-center">
             <h6 class="text-white text-center">© 2024 Codebenders. All rights reserved</h6>
         </div>
+        
 
     </footer>
 
-    <script src="../js/script.js"></script>
+    <!-- <script src="../js/script.js"></script> -->
     <script src="../js/catalogue.js"></script>
 
 </body>
