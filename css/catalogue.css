@@ -1,0 +1,54 @@
+::-webkit-scrollbar {
+    width: 12px;             
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;       
+    border-radius: 10px;      
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #0F67B1; 
+    border-radius: 10px;       
+    border: 3px solid #f1f1f1; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0A4D84; 
+}
+
+
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+.slide[data-active]{
+
+
+    opacity: 1;
+}
+.carousel-btn{
+    position: absolute;
+    border:none;
+    background: none;
+    font-size: 4rem;
+    top:50%;
+    z-index: 5;
+    color: rgb(255, 255, 255, 5);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, .1);
+}
+.carousel-btn:hover , .carousel-btn:focus{
+    color: white;
+    background-color: rgba(0, 0, 0, .3);
+}
+.carousel-btn.prev{
+    left: 1rem;
+}
+.carousel-btn.next{
+    right: 1rem;
+}

@@ -11,16 +11,12 @@ document.addEventListener("DOMContentLoaded",()=>{
     let buttonNavbar = document.getElementById("buttonNavbar");
     
 
-    buttonNavbar.onclick = ()=>{
-        if(listNavbar.style.width == "100%"){
+   
+    buttonNavbar.onclick = () => {
+        if (listNavbar.style.width == "100%") {
             listNavbar.style.width = "0%";
-        }else{
+        } else {
             listNavbar.style.width = "100%";
-            searchInput.style.height = "0px";
-            OrderList.style.width = "0%";
-            searchInput.style.border = "none";
-
-
         }
     }
 // ======================== open Search ====================
@@ -36,8 +32,6 @@ document.addEventListener("DOMContentLoaded",()=>{
         }else{
             searchInput.style.height = "50px";
             searchInput.style.border = "2px solid black";
-            listNavbar.style.width = "0%";
-        OrderList.style.width = "0%";
         }
     }
 
@@ -58,6 +52,7 @@ buttonOrders.onclick = ()=>{
         OrderList.getElementsByClassName("cardOrders")[0].style.transform = "translate(0%)";
     }
 }
+
 updateCounter();
 ordersCalcule();
 getCountOrder();
