@@ -45,23 +45,22 @@
     <section id="Devis" class="py-8">
     <!-- En-tête du devis -->
     <div id="Top" class="flex justify-around m-4 items-center">
-        <!-- Titre et informations de date et lieu -->
         <div id="Title">
             <h1 class="font-semibold text-5xl text-[#134B70] p-4">Devis</h1>
             <div id="Date-Lieu-Order" class="font-semibold text-base px-4">
-                <p id="Date" class="text-[#134B70]">Date : 01/01/2023</p>
-                <p id="Lieu" class="text-[#134B70]">Lieu : Casablanca, Maroc</p>
+                <p id="Date" class="font-medium text-sm">Date : </p>
+                <p id="Lieu" class="font-medium text-sm">Lieu : Safi, Maroc</p>
             </div>
         </div>
 
         <!-- Informations de l'entreprise et logo -->
         <div id="shop-info" class="bg-gray-300 w-[500px] h-[160px] p-4 flex justify-between items-center">
             <div>
-                <p class="text-[#0F67B1] font-semibold">Nom de l'entreprise : You-Code</p>
-                <p class="text-[#0F67B1] font-semibold">Adresse physique : Safi, Maroc</p>
-                <p class="text-[#0F67B1] font-semibold">Numéro : (+212) 5 00 000 000</p>
-                <p class="text-[#0F67B1] font-semibold">E-mail : you-code@gmail.com</p>
-                <p class="text-[#0F67B1] font-semibold">Numéro de SIRET : 0000000000</p>
+                <p class="text-[#0F67B1] font-semibold">Nom de l'entreprise : <span class="text-black font-medium   ">You-Code</span></p>
+                <p class="text-[#0F67B1] font-semibold">Adresse physique :<span class="text-black font-medium">Safi, Maroc</span> </p>
+                <p class="text-[#0F67B1] font-semibold">Numéro :<span class="text-black font-medium">(+212) 5 00 000 000</span> </p>
+                <p class="text-[#0F67B1] font-semibold">E-mail :<span class="text-black font-medium">you-code@gmail.com</span> </p>
+                <p class="text-[#0F67B1] font-semibold">Numéro de SIRET :<span class="text-black font-medium"> 0000000000</span></p>
             </div>
             <div>
                 <img src="../img/Shopping Cart.png" alt="Logo" class="h-16 w-16">
@@ -133,10 +132,10 @@
                 </tr>
             </tbody>
         </table>
-        <button type="submit" class="bg-blue-600">
-            Imprimer le Devis
-        </button>
-    </div>
+        <div  class="flex justify-evenly my-6">
+            <button id="Imprimer" class="bg-[#0F67B1] rounded-lg">Imprimer le Devis</button>
+            <button id="Valider" class="bg-[#0F67B1] rounded-lg">Valider la Commande</button>
+        </div>
     
 </section>
 
