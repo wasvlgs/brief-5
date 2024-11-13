@@ -43,7 +43,6 @@
 
 
     <section id="Devis" class="py-8">
-    <!-- En-tête du devis -->
     <div id="Top" class="flex justify-around m-4 items-center">
         <div id="Title">
             <h1 class="font-semibold text-5xl text-[#134B70] p-4">Devis</h1>
@@ -53,7 +52,6 @@
             </div>
         </div>
 
-        <!-- Informations de l'entreprise et logo -->
         <div id="shop-info" class="bg-gray-300 w-[500px] h-[160px] p-4 flex justify-between items-center">
             <div>
                 <p class="text-[#0F67B1] font-semibold">Nom de l'entreprise : <span class="text-black font-medium   ">You-Code</span></p>
@@ -108,33 +106,32 @@
 
         <!--Montant-TL -->
         <table class="w-full border my-6">
-            <thead class="bg-[#19AFE7] font-medium">
+            <thead class="bg-[#19AFE7] w-full font-medium">
                 <tr>
-                    <th colspan="2" class="px-4 py-2 text-left text-[#EEEEEE]">Montant Total</th>
+                    <th colspan="4" class="px-4 py-2 text-left text-[#EEEEEE]">Montant Total</th>
                 </tr>
             </thead>
             <tbody class="bg-[#EEEEEE] font-medium">
                 <tr class="hover:bg-gray-100">
-                    <td class="px-4 py-2 text-left">Prix</td>
+                    <th class="px-4 py-2 text-left">Prix</td>
+                    <th class="px-4 py-2 text-left">TVA (20%)</td> 
+                    <th class="px-4 py-2 text-left">Shipping Cost</td>
+                    <th class="px-4 py-2 text-left">Montant Total TTC</td>
+
+                </tr>
+                <tr class="bg-[#EEEEEE]">
                     <td class="px-4 py-2 text-right">$2300.00</td>
-                </tr>
-                <tr class="bg-[#EEEEEE]">
-                    <td class="px-4 py-2 text-left">TVA (20%)</td>
                     <td class="px-4 py-2 text-right">$460.00</td>
-                </tr>
-                <tr class="bg-[#EEEEEE]">
-                    <td class="px-4 py-2 text-left">Shipping Cost</td>
                     <td class="px-4 py-2 text-right">$50.00</td>
-                </tr>
-                <tr class="bg-[#EEEEEE] font-semibold">
-                    <td class="px-4 py-2 text-left">Montant Total TTC</td>
                     <td class="px-4 py-2 text-right">$2810.00</td>
                 </tr>
+               
             </tbody>
         </table>
         <div  class="flex justify-evenly my-6">
-            <button id="Imprimer" class="bg-[#0F67B1] rounded-lg">Imprimer le Devis</button>
-            <button id="Valider" class="bg-[#0F67B1] rounded-lg">Valider la Commande</button>
+            <!-- <button onclick="Imprimer('Devis')" class="bg-[#0F67B1] rounded-lg">Imprimer le Devis</button> -->
+            <button id="Imprimer" class="bg-[#0F67B1] text-xl text-white  rounded-3xl p-3 hover:bg-[#19AFE7]">Imprimer le Devis</button>
+            <button id="Valider" class="bg-[#0F67B1] text-xl text-white rounded-3xl p-3 hover:bg-[#19AFE7]">Valider la Commande</button>
         </div>
     
 </section>
