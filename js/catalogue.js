@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             listNavbar.style.width = "0%";
         } else {
             listNavbar.style.width = "100%";
-            categoriesDropdown.classList.add("hidden"); 
+            categoriesDropdown.classList.add("hidden");
         }
         carouselContent.classList.toggle("hidden");
     };
@@ -49,50 +49,61 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-   
     let buttonCategories = document.getElementById("buttonCategories");
-let categoriesDropdown = document.getElementById("categoriesDropdown");
-
-buttonCategories.onmouseover = () => {
-    categoriesDropdown.classList.toggle("hidden");
-};
-buttonCategories.onmouseout = () => { categoriesDropdown.classList.add("hidden"); };
-
+    let categoriesDropdown = document.getElementById("categoriesDropdown");
+    let buttonDrop = document.getElementById("button-drop");
+    
     buttonCategories.onmouseover = () => {
-        categoriesDropdown.classList.toggle("hidden");
+        categoriesDropdown.classList.remove("hidden");  
+        buttonDrop.classList.add("transition-transform", "duration-300", "rotate-90");
     };
-    buttonCategories.onmouseout = () => { categoriesDropdown.classList.add("hidden"); };
+    
+    buttonCategories.onmouseleave = () => {
+        categoriesDropdown.classList.add("hidden");
+        buttonDrop.classList.remove("rotate-90");
+    };
+    categoriesDropdown.onmouseover = () => {
+        categoriesDropdown.classList.toggle("hidden");
+        buttonDrop.classList.add("transition-transform", "duration-300", "rotate-90");
+    };
+    categoriesDropdown.onmouseout = () => {
+        categoriesDropdown.classList.toggle("hidden");
+        buttonDrop.classList.remove("rotate-90");
+    };
+   
 
-    const buttons = document.querySelectorAll("[data-carousel-btn]");
+    // const buttons = document.querySelectorAll("[data-carousel-btn]");
     const slides = document.querySelectorAll(".slide");
     let activeIndex = 0;
 
     const updateCarousel = () => {
-        slides.forEach(slide => slide.removeAttribute("data-active"));
+        slides.forEach((slide) => slide.removeAttribute("data-active"));
         slides[activeIndex].setAttribute("data-active", "");
     };
     updateCarousel();
 
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            activeIndex = button.classList.contains('next') ? (activeIndex + 1) % slides.length : (activeIndex - 1 + slides.length) % slides.length;
-            updateCarousel();
-        });
-    });
+    // buttons.forEach((button) => {
+    //     button.addEventListener("click", () => {
+    //         activeIndex = button.classList.contains("next")
+    //             ? (activeIndex + 1) % slides.length
+    //             : (activeIndex - 1 + slides.length) % slides.length;
+    //         updateCarousel();
+    //     });
+    // });
 
     setInterval(() => {
-        activeIndex = (activeIndex + 1) % slides.length; 
-        updateCarousel(); 
+        activeIndex = (activeIndex + 1) % slides.length;
+        updateCarousel();
     }, 3000);
 
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
+    fetch("data.json")
+        .then((response) => response.json())
+        .then((data) => {
             productsArray = data;
             displayPage(currentPage);
             updatePaginationControls();
         })
-        .catch(error => console.error('Error loading JSON:', error));
+        .catch((error) => console.error("Error loading JSON:", error));
 
     function displayPage(page) {
         productContainer.innerHTML = "";
@@ -100,12 +111,13 @@ buttonCategories.onmouseout = () => { categoriesDropdown.classList.add("hidden")
         const end = start + productsPerPage;
         const pageProducts = productsArray.slice(start, end);
 
-        pageProducts.forEach(product => {
-            const productCard = document.createElement('div');
-            productCard.className = 'w-[146px] h-[174px] lg:w-[400px] lg:h-[409px] bg-[#E6E6E6] rounded-lg shadow-lg lg:p-4 pt-2 flex flex-col items-center text-center';
+        pageProducts.forEach((product) => {
+            const productCard = document.createElement("div");
+            productCard.className =
+                " w-[146px] h-[174px] lg:w-[400px] lg:h-[409px] bg-[#E6E6E6] rounded-lg shadow-lg lg:p-4 pt-2 flex flex-col items-center text-center";
 
             productCard.innerHTML = `
-    <button id="details-button"><img src="${product.image}" alt="${product.name}" class="px-4 object-fill w-screen h-[10vh] mb-4 rounded lg:w-screen lg:px-10 lg:h-[35vh]"> </button>
+    <button id="details-button"><img src="${product.image}" alt="${product.name}" class="px-4 object-fill w-screen h-[10vh] mb-4 rounded-[30px] lg:w-screen lg:px-10 lg:h-[35vh]"> </button>
     <h3 class="text-[12px] lg:text-lg font-bold mb-2">${product.name}</h3>
     <p class="text-gray-600 lg:mb-2 text-[12px] lg:text-lg">${product.description}</p>
     <div class="flex items-center justify-around w-full">
@@ -125,7 +137,8 @@ buttonCategories.onmouseout = () => { categoriesDropdown.classList.add("hidden")
         for (let i = 1; i <= Math.min(totalPages, 3); i++) {
             const pageButton = document.createElement("button");
             pageButton.textContent = i;
-            pageButton.className = `px-4 py-2 rounded-[30px] ${i === currentPage ? 'bg-gray-400' : 'bg-gray-300'}`;
+            pageButton.className = `px-4 py-2 rounded-[30px] ${i === currentPage ? "bg-gray-400" : "bg-gray-300"
+                }`;
             pageButton.addEventListener("click", () => {
                 currentPage = i;
                 displayPage(currentPage);
@@ -134,47 +147,10 @@ buttonCategories.onmouseout = () => { categoriesDropdown.classList.add("hidden")
             pageIndicator.appendChild(pageButton);
         }
     }
-    
+
 });
-// document.addEventListener('click', function (e) {
-//     if (e.target && e.target.classList.contains('add-to-cart')) {
-//         const productId = e.target.getAttribute('data-id');
-//         addToCart(productId);  // Pass productId to add the item to cart
-//     }
-// });
 
-// function addToCart(productId) {
-//     const product = productsArray.find(product => product.id === productId);
-//     if (product) {
-//         const cartItem = createCartItem(product);
-//         document.querySelector('#OrderList .cardOrders').appendChild(cartItem);
-//         updateCounter();
-//         ordersCalcule();
-//     }
-// }
 
-// function createCartItem(product) {
-//     const cartItem = document.createElement('div');
-//     cartItem.classList.add('order', 'w-full', 'min-h-[100px]', 'bg-white', 'rounded-[10px]', 'flex', 'max-sm:min-h-[120px]');
 
-//     cartItem.innerHTML = `
-//         <div class="w-[25%] h-full flex justify-center items-center p-2">
-//             <img src="${product.image}" class="w-full h-full">
-//         </div>
-//         <div class="w-[55%] h-full flex flex-col justify-center ">
-//             <h2 class="text-2xl">${product.name}</h2>
-//             <p class="text-[10px] max-sm:text-[8px]">${product.description}</p>
-//             <div class="flex items-center gap-5">
-//                 <input type="number" class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="1">
-//                 <h3 class="max-sm:hidden">Type RAM/PROCESSEUR</h3>
-//             </div>
-//         </div>
-//         <div class="w-[20%] h-full flex flex-col justify-end items-end p-2">
-//             <div class="w-full h-[90%] flex justify-end items-center pr-4">
-//                 <i class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton" onclick="removeOrder(this)"></i>
-//             </div>
-//             <h3 class="priceOrder text-[#5b5b5b]">${product.price}</h3>
-//         </div>
-//     `;
-//     return cartItem;
-// }
+            
+        

@@ -52,3 +52,7 @@
 .carousel-btn.next{
     right: 1rem;
 }
+#categoriesDropdown a.active {
+    font-weight: bold;
+    color: #00f;
+  }
