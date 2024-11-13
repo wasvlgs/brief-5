@@ -17,3 +17,22 @@ document.getElementById('Imprimer').addEventListener('click', function() {
 //     impr.document.close();
 //     impr.print();
 // }
+
+function ouvrirModal() {
+    document.getElementById("confirmationModal").style.display = "flex";
+}
+
+function fermerModal() {
+    document.getElementById("confirmationModal").style.display = "none";
+}
+const closeBtn = document.getElementsByClassName("close")[0];
+closeBtn.onclick = function() {
+    fermerModal();
+}
+
+// Fermer la modale si l'utilisateur clique en dehors de celle-ci
+window.onclick = function(event) {
+    if (event.target === document.getElementById("confirmationModal")) {
+        fermerModal();
+    }
+}
