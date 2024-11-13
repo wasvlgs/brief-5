@@ -1,4 +1,9 @@
 
+// ======================= panier structure =======================
+
+let panierCards = [];
+
+
 
 
 
@@ -132,31 +137,40 @@ function removeOrder(element){
 // ======================= panier list =====================
 
 
-let panierCards = [];
 
 function addCardToPanier(index){
         let ordersAfficher = document.getElementById("ordersAfficher");
+
 
         fetch('data.json')
                 .then(response => response.json())
                 .then(data => {
                         // let card = 
                         panierCards.push({ "name": data[index].name,
-                         "price": data[index].price,
-                          "description": data[index].description,
-                           "image": data[index].image,
-                            "category": data[index].category }
+                                            "price": data[index].name,
+                                            "description": data[index].name,
+                                            "image": "https://i.pinimg.com/236x/13/33/8d/13338d3800a5d08c487df4e207ab6e54.jpg",
+                                            "category": "Monitors",
+                                            "Supplier reference": "TSM250",
+                                            "Brand": "TouchView",
+                                            "Hard disk capacity": "None",
+                                            "Design": "Sleek, frameless",
+                                            "Operating system": "None",
+                                            "Ratings": "4.7/5",
+                                            "RAM": "None",
+                                            "Processor": "None",
+                                            "Graphics card": "None",
+                                            "Screen size": "23 inches"
+                                        }
                         )
 
                 })
                 .catch(error => console.error('Error loading JSON:', error));
                     
         
-        for(i = 0; i < panierCards.length; i++){
-            ordersAfficher.innerHTML += `
-            <div class="order w-full min-h-[100px]  bg-white rounded-[10px] flex  max-sm:min-h-[120px]">
+        ordersAfficher.innerHTML += `<div class="order w-full min-h-[100px]  bg-white rounded-[10px] flex  max-sm:min-h-[120px]">
                 <div class="w-[25%] h-full flex justify-center items-center p-2">
-                    <img src=" class="w-full h-full">
+                    <img src="../img/productOrder.svg" class="w-full h-full">
                 </div>
                 <div class="w-[55%] h-full flex flex-col justify-center ">
                     <h2 class="text-2xl">Title</h2>
@@ -167,9 +181,9 @@ function addCardToPanier(index){
                     <div class="w-full h-[90%] flex justify-end items-center pr-4"><i class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton" onclick="removeOrder(this)"></i></div>
                     <h3 class="priceOrder text-[#5b5b5b]">250$</h3>
                 </div>
-            </div>
-            `
-        }
+            </div>`
+
+            updateCounter();
 
 
 
