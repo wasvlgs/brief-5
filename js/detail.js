@@ -1,46 +1,30 @@
-let getCard = {
-  name: "Laptop Pro X",
-  price: "$1200",
-  description: "16GB RAM, 512GB SSD",
-  image: [
-    "https://images.pexels.com/photos/18105/pexels-photo.jpg",
-    "https://images.pexels.com/photos/18105/pexels-photo.jpg",
-    "https://images.pexels.com/photos/18105/pexels-photo.jpg",
-  ],
-  supplier: "56598797",
-  ram: "8",
-  brand: "HP",
-  processor: "INTEL CORE I5",
-  hard_disk: "1000",
-  graphic_card: "Intel Iris Xe",
-  design: "NON",
-  screen_size: "15,6 pouces",
-  operating_system: "WINDOWS",
-  rating:"4.6",
-};
+fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            let getCard = data[0];
 
-function displayProduct() {
+
   document.getElementById("product-title").textContent = getCard.name;
   document.getElementById("product-price").textContent = getCard.price;
   document.getElementById("product-description").textContent = getCard.description;
-  document.getElementById("mainImage").src = getCard.image[0];
-  document.getElementById("supplier").textContent = getCard.supplier;
-  document.getElementById("RAM").textContent = getCard.ram;
-  document.getElementById("brand").textContent = getCard.brand;
-  document.getElementById("processor").textContent = getCard.processor;
-  document.getElementById("hard-disk").textContent = getCard.hard_disk;
-  document.getElementById("graphic-card").textContent = getCard.graphic_card;
-  document.getElementById("design").textContent = getCard.design;
-  document.getElementById("screen-size").textContent = getCard.screen_size;
-  document.getElementById("operating-system").textContent = getCard.operating_system;
-  document.getElementById("rating").textContent = getCard.rating;
+  document.getElementById("mainImage").src = getCard.image;
+  document.getElementById("supplier").textContent = getCard.Supplier;
+  document.getElementById("RAM").textContent = getCard.RAM;
+  document.getElementById("brand").textContent = getCard.Brand;
+  document.getElementById("processor").textContent = getCard.Processor;
+  document.getElementById("hard-disk").textContent = getCard.HardDiscCapacity;
+  document.getElementById("graphic-card").textContent = getCard.GraphicsCard;
+  document.getElementById("design").textContent = getCard.Design;
+  document.getElementById("screen-size").textContent = getCard.screenSize;
+  document.getElementById("operating-system").textContent = getCard.operatingSystem;
+  document.getElementById("rating").textContent = getCard.Ratings;
 
-  for (let i = 1; i < getCard.image.length; i++) {
-    document.getElementById("img1").src = getCard.image[i];
-    document.getElementById("img2").src = getCard.image[i];
-  }
-}
+  
 
+        })
+        .catch(error => console.error('Error loading JSON:', error));
+
+        displayProduct()
 window.onload = displayProduct;
 
 // slide
