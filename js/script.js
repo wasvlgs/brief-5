@@ -2,7 +2,6 @@
 
 
 
-
 document.addEventListener("DOMContentLoaded",()=>{
 
 // ======================== open NavBar ====================
@@ -125,16 +124,53 @@ function removeOrder(element){
 }
 
 
-// ======================= data json =============================
 
-fetch('../pages/data.json')
-  .then(response => response.json())
-  .then(data => {
-    getData(data);
-  });
 
-function getData(myData){
-  console.log(myData)
+
+
+
+// ======================= panier list =====================
+
+
+let panierCards = [];
+
+function addCardToPanier(index){
+        let ordersAfficher = document.getElementById("ordersAfficher");
+
+        fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                        // let card = 
+                        panierCards.push({ "name": data[index].name,
+                         "price": data[index].price,
+                          "description": data[index].description,
+                           "image": data[index].image,
+                            "category": data[index].category }
+                        )
+
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+                    
+        
+        for(i = 0; i < panierCards.length; i++){
+            ordersAfficher.innerHTML += `
+            <div class="order w-full min-h-[100px]  bg-white rounded-[10px] flex  max-sm:min-h-[120px]">
+                <div class="w-[25%] h-full flex justify-center items-center p-2">
+                    <img src=" class="w-full h-full">
+                </div>
+                <div class="w-[55%] h-full flex flex-col justify-center ">
+                    <h2 class="text-2xl">Title</h2>
+                    <p class="text-[10px] max-sm:text-[8px]">description description description description description description description</p>
+                    <div class="flex items-center gap-5"><input type="number" class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="1"><h3 class="max-sm:hidden">Type RAM/PROCESSEUR</h3></div>
+                </div>
+                <div  class="w-[20%] h-full flex flex-col justify-end items-end p-2">
+                    <div class="w-full h-[90%] flex justify-end items-center pr-4"><i class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton" onclick="removeOrder(this)"></i></div>
+                    <h3 class="priceOrder text-[#5b5b5b]">250$</h3>
+                </div>
+            </div>
+            `
+        }
+
+
+
 }
-
-
