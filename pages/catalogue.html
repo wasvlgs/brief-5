@@ -51,7 +51,7 @@
         <div class="flex w-full h-1/2 justify-center items-end">
             <div class="w-[50%] h-[45px] bg-mainColor lg:bg-white rounded-t-[20px] max-xl:w-[70%] max-lg:bg-transparent">
                 <ul id="listNavbar" class="w-full h-full flex items-center justify-center gap-20 text-black font-medium  max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400 z-50">
-                    <li id="buttonCategories" class="absolute left-20 hover:text-mainColor cursor-pointer">
+                    <li id="buttonCategories" class="absolute flex items-center left-20 hover:text-mainColor cursor-pointer">
                         Categories
                         <img class="bg-mainColor" src="../img/Slider.png" alt="">
                     </li>
@@ -61,7 +61,7 @@
                     <li><a class="hover:text-mainColor" href="#">Contact</a></li>
                 </ul>
     
-                <ul id="categoriesDropdown" class="hidden top-[25%] left-3 w-[35vw] h-[50%] absolute flex flex-col justify-evenly gap-2 text-mainColor bg-white p-4 rounded-lg">
+                <ul id="categoriesDropdown" class="hidden top-[25%] left-3 w-[35vw] h-[50%] absolute flex bg-mainColor flex-col justify-evenly gap-2 text-white p-4 rounded-lg z-50">
                     <li><a href="#">Category 1</a></li>
                     <li><a href="#">Category 2</a></li>
                     <li><a href="#">Category 3</a></li>
@@ -81,17 +81,17 @@
             <button class="carousel-btn prev" data-carousel-btn>&#8612;</button>
             <button class="carousel-btn next" data-carousel-btn>&#8614;</button>
             <ul>
-                <li class="slide" data-active>
-                    <img class="w-screen" src="../img/1carousel.png" alt="">
+                <li class="slide h-[245px]  lg:h-[80vh]" data-active>
+                    <img class="w-screen h-[245px]  lg:h-[81vh]" src="https://images.pexels.com/photos/5625005/pexels-photo-5625005.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
                 </li>
-                <li class="slide">
-                    <img class="w-screen" src="../img/2carousel.png" alt="">
+                <li class="slide h-[245px]  lg:h-[80vh]">
+                    <img class="w-screen h-[245px] lg:h-[80vh]" src="https://images.unsplash.com/photo-1566997560041-002fd549180b?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                 </li>
-                <li class="slide">
-                    <img class="w-screen" src="../img/3carousel.png" alt="">
+                <li class="slideh-[245px]  lg:h-[80vh]">
+                    <img class="w-screen h-[245px] lg:h-[80vh]" src="../img/3carousel.png" alt="">
                 </li>
-                <li class="slide">
-                    <img class="w-screen" src="../img/4carousel.png" alt="">
+                <li class="slide h-[245px]  lg:h-[80vh]">
+                    <img class="w-screen h-[245px] lg:h-[80vh]" src="../img/4carousel.png" alt="">
                 </li>
             </ul>
         </div>
@@ -102,7 +102,7 @@
 
  
     <div class="tabs-container">
-        <div id="productContainer" class="p-[5.9vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <div id="productContainer" class=" p-[5.9vw] lg:pt-[0] grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         <div class="pagination flex justify-center items-center gap-4 mt-4">
             <span id="pageIndicator" class="text-lg"></span>
         </div>

@@ -11,11 +11,14 @@ document.addEventListener("DOMContentLoaded",()=>{
     let buttonNavbar = document.getElementById("buttonNavbar");
     
 
-   
-    buttonNavbar.onclick = () => {
-        if (listNavbar.style.width == "100%") {
+    buttonNavbar.onclick = ()=>{
+        if(listNavbar.style.width == "100%"){
             listNavbar.style.width = "0%";
-        } else {
+            setTimeout(()=>{
+                listNavbar.style.display = "none";
+            },500)
+        }else{
+            listNavbar.style.display = "flex";
             listNavbar.style.width = "100%";
         }
     }
@@ -52,7 +55,6 @@ buttonOrders.onclick = ()=>{
         OrderList.getElementsByClassName("cardOrders")[0].style.transform = "translate(0%)";
     }
 }
-
 updateCounter();
 ordersCalcule();
 getCountOrder();
@@ -121,3 +123,18 @@ function removeOrder(element){
             ordersCalcule();
             updateCounter();
 }
+
+
+// ======================= data json =============================
+
+fetch('../pages/data.json')
+  .then(response => response.json())
+  .then(data => {
+    getData(data);
+  });
+
+function getData(myData){
+  console.log(myData)
+}
+
+
