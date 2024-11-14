@@ -4,6 +4,16 @@ document.getElementById('Lieu').textContent = "Lieu : Safi, Maroc: " + new Date(
 
 
 
+const panier = [
+    { nom: "iPhone", quantite: 2, prixUnitaire: 500.00 },
+    { nom: "Samsung", quantite: 1, prixUnitaire: 700.00 },
+    { nom: "Realme", quantite: 3, prixUnitaire: 200.00 }
+];
+
+
+
+
+
 // impr devis
 
 document.getElementById('Imprimer').addEventListener('click', function() {

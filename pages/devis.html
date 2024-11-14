@@ -42,12 +42,13 @@
     </header>
 
 
+<!---------------------------------------- devis --------------------------------------------->
     <section id="Devis" class="py-8">
     <div id="Top" class="flex justify-around m-4 items-center">
         <div id="Title">
             <h1 class="font-semibold text-5xl text-[#134B70] p-4">Devis</h1>
             <div id="Date-Lieu-Order" class="font-semibold text-base px-4">
-                <p id="Date" class="font-medium text-sm">Date : </p>
+                <p id="Date" class="font-medium text-sm">Date : <span id="dateRendu"></span></p>
                 <p id="Lieu" class="font-medium text-sm">Lieu : Safi, Maroc</p>
             </div>
         </div>
@@ -69,8 +70,8 @@
     <hr class="border-t-2 w-[85%] border-gray-400 mx-auto my-6">
 
     
-    <!-- detail order -->
 
+    <!------------------------------------------ detail order -------------------------------------------->
     <div id="Tableux" class="w-[80%] mx-auto">
         <table class="w-full  my-6">
             <thead class="bg-[#19AFE7] font-medium py-4">
@@ -82,7 +83,10 @@
                 </tr>
             </thead>
             <tbody class="bg-[#EEEEEE] font-medium">
-                <tr class="">
+
+                <!-- JS -->
+
+                <!-- <tr class="">
                     <td class="px-4 py-2">-</td>
                     <td class="px-4 py-2">0</td>
                     <td class="px-4 py-2 border">$00.00</td>
@@ -99,12 +103,12 @@
                     <td class="px-4 py-2">0</td>
                     <td class="px-4 py-2">$00.00</td>
                     <td class="px-4 py-2">$00.00</td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
 
 
-        <!--Montant-TL -->
+<!-------------------------------------------- Montant-TL -------------------------------------------->
         <table class="w-full border my-6">
             <thead class="bg-[#19AFE7] w-full font-medium">
                 <tr>
@@ -118,12 +122,12 @@
                     <th class="px-4 py-2 text-left">Shipping Cost</td>
                     <th class="px-4 py-2 text-left">Montant Total TTC</td>
                 </tr>
-                <hr class="border-t-2 w-[100%] border-gray-400 mx-auto my-6">
+                <!-- <hr class="border-t-2 w-[100%] border-gray-400 mx-auto my-6"> -->
                 <tr class="bg-[#EEEEEE] ">
-                    <td class="px-4 py-2">$00.00</td>
-                    <td class="px-4 py-2">$00.00</td>
-                    <td class="px-4 py-2">$00.00</td>
-                    <td class="px-4 py-2">$00.00</td>
+                    <td id="Prix" class="px-4 py-2">$00.00</td> <!--prix-->
+                    <td id="TVA" class="px-4 py-2">$00.00</td> <!-- TVA -->
+                     <td id="Shipping" class="px-4 py-2">$00.00</td> <!--shipping -->
+                     <td id="Total-TTC" class="px-4 py-2">$00.00</td> <!--Montant Total TTC -->
                 </tr>
                
             </tbody>
@@ -151,7 +155,7 @@
 
 
 
-    <!-- footer -->
+    <!----------------------- footer ----------------------->
     <footer class="w-full min-h-[400px] bg-mainColor grid grid-cols-[30%_30%_40%] grid-rows-[80% 20%] justify-center max-lg:grid-cols-[50%_50%] max-lg:grid-rows-[auto_auto_60px] max-lg:gap-y-5">
 
         <div class="flex flex-col pt-10 pl-20 max-sm:pl-5">
