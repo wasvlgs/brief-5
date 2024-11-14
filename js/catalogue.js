@@ -110,7 +110,7 @@ buttonCategories.onmouseout = () => { categoriesDropdown.classList.add("hidden")
     <p class="text-gray-600 lg:mb-2 text-[12px] lg:text-lg">${product.description}</p>
     <div class="flex items-center justify-around w-full">
         <span class="text-[#FF0000] font-semibold lg:text-lg text-[12px]">${product.price}</span>
-        <img onclick="addCardToPanier(${index})" class="getBuyButtons lg:w-10 lg:h-14 h-[43px] w-[23px] ml-4 cursor-pointer add-to-cart" src="../img/AddShoppingCart.png" alt="Add to cart">
+        <img onclick="addCardToPanier(${product.id},${index})" class="getBuyButtons lg:w-10 lg:h-14 h-[43px] w-[23px] ml-4 cursor-pointer add-to-cart" src="../img/AddShoppingCart.png" alt="Add to cart">
     </div>
 `;
 

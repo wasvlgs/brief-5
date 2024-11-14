@@ -15,7 +15,8 @@
     "RAM": "16GB",
     "Processor": "Intel Core i7",
     "GraphicsCard": "NVIDIA GTX 1650",
-    "ScreenSize": "15.6 inches"
+    "ScreenSize": "15.6 inches",
+    "count":1
   },
   {
     "id": 2,
@@ -33,7 +34,8 @@
     "RAM": "None",
     "Processor": "None",
     "GraphicsCard": "None",
-    "ScreenSize": "27 inches"
+    "ScreenSize": "27 inches",
+    "count":1
   },
   {
     "id": 3,
@@ -51,7 +53,8 @@
     "RAM": "None",
     "Processor": "None",
     "GraphicsCard": "None",
-    "ScreenSize": "None"
+    "ScreenSize": "None",
+    "count":1
   },
   {
     "id": 4,
@@ -69,7 +72,8 @@
     "RAM": "None",
     "Processor": "None",
     "GraphicsCard": "None",
-    "ScreenSize": "None"
+    "ScreenSize": "None",
+    "count":1
   },
   {
     "id": 5,
@@ -87,7 +91,8 @@
     "RAM": "None",
     "Processor": "None",
     "GraphicsCard": "None",
-    "ScreenSize": "None"
+    "ScreenSize": "None",
+    "count":1
   },
   {
     "id": 6,
@@ -105,7 +110,8 @@
     "RAM": "8GB",
     "Processor": "Snapdragon 888",
     "GraphicsCard": "Adreno 660",
-    "ScreenSize": "6.7 inches"
+    "ScreenSize": "6.7 inches",
+    "count":1
   },
   {
     "id": 7,
@@ -123,7 +129,8 @@
     "RAM": "6GB",
     "Processor": "A14 Bionic",
     "GraphicsCard": "Integrated",
-    "ScreenSize": "10.5 inches"
+    "ScreenSize": "10.5 inches",
+    "count":1
   },
   {
     "id": 8,
@@ -141,7 +148,8 @@
     "RAM": "None",
     "Processor": "None",
     "GraphicsCard": "None",
-    "ScreenSize": "None"
+    "ScreenSize": "None",
+    "count":1
   },
   {
     "id": 9,
@@ -159,7 +167,8 @@
     "RAM": "2GB",
     "Processor": "Dual-core ARM",
     "GraphicsCard": "None",
-    "ScreenSize": "1.5 inches"
+    "ScreenSize": "1.5 inches",
+    "count":1
   },
   {
     "id": 10,
@@ -177,7 +186,8 @@
     "RAM": "16GB",
     "Processor": "Custom AMD Ryzen",
     "GraphicsCard": "AMD RDNA 2",
-    "ScreenSize": "None"
+    "ScreenSize": "None",
+    "count":1
   },
   {
     "id": 11,
@@ -195,7 +205,8 @@
     "RAM": "None",
     "Processor": "None",
     "GraphicsCard": "None",
-    "ScreenSize": "None"
+    "ScreenSize": "None",
+    "count":1
   },
   
     {
@@ -214,7 +225,8 @@
       "RAM": "None",
       "Processor": "None",
       "GraphicsCard": "None",
-      "ScreenSize": "None"
+      "ScreenSize": "None",
+    "count":1
     },
     {
     "id": 13,
@@ -232,7 +244,8 @@
       "RAM": "6GB",
       "Processor": "MediaTek Helio",
       "GraphicsCard": "Mali-G52",
-      "ScreenSize": "6.1 inches"
+      "ScreenSize": "6.1 inches",
+    "count":1
     },
     {
     "id": 14,
@@ -250,7 +263,8 @@
       "RAM": "32GB",
       "Processor": "Intel Core i9",
       "GraphicsCard": "NVIDIA RTX 3060",
-      "ScreenSize": "17 inches"
+      "ScreenSize": "17 inches",
+    "count":1
     },
     {
     "id": 15,
@@ -268,7 +282,8 @@
       "RAM": "None",
       "Processor": "None",
       "GraphicsCard": "None",
-      "ScreenSize": "None"
+      "ScreenSize": "None",
+    "count":1
     },
     {
     "id": 16,
@@ -286,7 +301,9 @@
       "RAM": "None",
       "Processor": "None",
       "GraphicsCard": "None",
-      "ScreenSize": "None"
+      "ScreenSize": "None",
+    "count":1
+
     },
     {
     "id": 17,
@@ -304,7 +321,9 @@
       "RAM": "4GB",
       "Processor": "Quad-core ARM",
       "GraphicsCard": "Integrated",
-      "ScreenSize": "50 inches"
+      "ScreenSize": "50 inches",
+    "count":1
+
     },
     {
     "id": 18,
@@ -322,7 +341,9 @@
       "RAM": "None",
       "Processor": "None",
       "GraphicsCard": "None",
-      "ScreenSize": "None"
+      "ScreenSize": "None",
+    "count":1
+
     },
     {
     "id": 19,
@@ -340,7 +361,9 @@
       "RAM": "8GB",
       "Processor": "Custom VR Chip",
       "GraphicsCard": "Integrated VR graphics",
-      "ScreenSize": "None"
+      "ScreenSize": "None",
+    "count":1
+
     },
     {
     "id": 20,
@@ -358,7 +381,8 @@
       "RAM": "None",
       "Processor": "None",
       "GraphicsCard": "None",
-      "ScreenSize": "None"
+      "ScreenSize": "None",
+    "count":1
     },
     {
     "id": 21,
@@ -376,7 +400,8 @@
       "RAM": "None",
       "Processor": "None",
       "GraphicsCard": "None",
-      "ScreenSize": "None"
+      "ScreenSize": "None",
+    "count":1
     },
     {
     "id": 22,
@@ -394,7 +419,8 @@
       "RAM": "None",
       "Processor": "None",
       "GraphicsCard": "None",
-      "ScreenSize": "None"
+      "ScreenSize": "None",
+    "count":1
     },
     {
     "id": 23,
@@ -412,7 +438,8 @@
       "RAM": "1GB",
       "Processor": "ARM Cortex",
       "GraphicsCard": "None",
-      "ScreenSize": "None"
+      "ScreenSize": "None",
+    "count":1
     },
     {
     "id": 24,
@@ -430,7 +457,8 @@
       "RAM": "None",
       "Processor": "None",
       "GraphicsCard": "None",
-      "ScreenSize": "None"
+      "ScreenSize": "None",
+    "count":1
     },
   
       {
@@ -449,7 +477,8 @@
         "RAM": "None",
         "Processor": "None",
         "GraphicsCard": "None",
-        "ScreenSize": "None"
+        "ScreenSize": "None",
+    "count":1
       },
       {
     "id": 26,
@@ -467,7 +496,8 @@
         "RAM": "512MB",
         "Processor": "ARM Cortex",
         "GraphicsCard": "None",
-        "ScreenSize": "None"
+        "ScreenSize": "None",
+    "count":1
       },
       {
     "id": 27,
@@ -485,7 +515,8 @@
         "RAM": "1GB",
         "Processor": "Quad-core processor",
         "GraphicsCard": "None",
-        "ScreenSize": "None"
+        "ScreenSize": "None",
+    "count":1
       },
       {
     "id": 28,
@@ -503,7 +534,8 @@
         "RAM": "None",
         "Processor": "None",
         "GraphicsCard": "None",
-        "ScreenSize": "23 inches"
+        "ScreenSize": "23 inches",
+    "count":1
       },
       {
     "id": 29,
@@ -521,7 +553,8 @@
         "RAM": "None",
         "Processor": "None",
         "GraphicsCard": "None",
-        "ScreenSize": "None"
+        "ScreenSize": "None",
+    "count":1
       },
       {
     "id": 30,
@@ -539,7 +572,8 @@
         "RAM": "None",
         "Processor": "Dual-core processor",
         "GraphicsCard": "None",
-        "ScreenSize": "None"
+        "ScreenSize": "None",
+    "count":1
       },
       {
     "id": 31,
@@ -557,7 +591,8 @@
         "RAM": "512MB",
         "Processor": "ARM Cortex",
         "GraphicsCard": "None",
-        "ScreenSize": "None"
+        "ScreenSize": "None",
+    "count":1
       }
     ]
     
