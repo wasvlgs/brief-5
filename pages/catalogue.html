@@ -20,78 +20,94 @@
     <header class="w-full h-[150px] bg-mainColor max-lg:h-[75px]">
         <div class="headerTop w-full h-1/2 flex justify-between items-center px-20 max-xl:px-10 max-lg:h-full">
             <img src="../img/logo.svg" alt="LOGO">
-    
-            <div id="searchInput" class="w-1/3 h-[45px] overflow-hidden rounded-[25px] flex max-xl:w-1/2 bg-white max-lg:rounded-none max-lg:h-0 max-lg:absolute max-lg:left-0 max-lg:top-[75px] transition-all duration-400 z-40">
-                <input type="text" class="w-[80%] h-full pl-6 text-black border-none outline-none" placeholder="Search...">
+
+            <div class="w-1/3 h-[45px] overflow-hidden rounded-[25px] flex max-xl:w-1/2 bg-white max-lg:rounded-none max-lg:h-0 max-lg:absolute max-lg:left-0 max-lg:top-[75px] transition-all duration-400 z-40">
+                <input id="searchInput" type="text" class="w-[80%] h-full pl-6 text-black border-none outline-none"
+                    placeholder="Search...">
                 <div class="w-[20%] h-full flex justify-center items-center bg-white">
                     <i class="fa-solid fa-magnifying-glass text-2xl text-[#838383]"></i>
                 </div>
             </div>
-    
+
             <div class="flex items-center gap-7 buttonsHeader">
                 <i id="buttonSearch" class="fa-solid fa-magnifying-glass text-2xl text-white cursor-pointer"></i>
-    
+
                 <div>
                     <i id="buttonOrders" class="fa-solid fa-cart-shopping text-3xl text-white relative cursor-pointer">
-                        <div id="counter" class="absolute w-[18px] h-[18px] rounded-[50%] bg-[red] top-[-5px] right-[-5px] flex justify-center items-center text-[10px]">
-                            
+                        <div id="counter"
+                            class="absolute w-[18px] h-[18px] rounded-[50%] bg-[red] top-[-5px] right-[-5px] flex justify-center items-center text-[10px]">
+
                         </div>
                     </i>
                 </div>
-    
-                <div class="w-[180px] h-[45px] bg-white flex items-center justify-between rounded-[25px] p-[2px] max-lg:hidden">
-                    <a href="#" class="w-1/2 h-full flex justify-center items-center bg-mainColor rounded-[25px] text-white">Sign Up</a>
-                    <a href="#" class="w-1/2 h-full flex justify-center items-center rounded-[25px] text-mainColor font-bold">Login</a>
+
+                <div
+                    class="w-[180px] h-[45px] bg-white flex items-center justify-between rounded-[25px] p-[2px] max-lg:hidden">
+                    <a href="#"
+                        class="w-1/2 h-full flex justify-center items-center bg-mainColor rounded-[25px] text-white">Sign
+                        Up</a>
+                    <a href="#"
+                        class="w-1/2 h-full flex justify-center items-center rounded-[25px] text-mainColor font-bold">Login</a>
                 </div>
-    
+
                 <i id="buttonNavbar" class="fa-solid fa-bars text-white text-2xl cursor-pointer z-10"></i>
             </div>
         </div>
-    
+
         <div class="flex w-full h-1/2 justify-center items-end">
-            <div class="w-[50%] h-[45px] bg-mainColor lg:bg-white rounded-t-[20px] max-xl:w-[70%] max-lg:bg-transparent">
-                <ul id="listNavbar" class="w-full h-full flex items-center justify-center gap-20 text-black font-medium  max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400 z-50">
-                    <li id="buttonCategories" class="absolute left-20 hover:text-mainColor cursor-pointer">
+            <div
+                class="w-[50%] h-[45px] bg-mainColor lg:bg-white rounded-t-[20px] max-xl:w-[70%] max-lg:bg-transparent">
+                <ul id="listNavbar"
+                    class="w-full h-full flex items-center justify-center gap-20 text-black font-medium  max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400 z-50">
+                    <li id="buttonCategories"
+                        class="top-[10vh] lg:top-[14vh] absolute flex items-center lg:left-20 cursor-pointer gap-2 pl-3 lg:pl-0">
                         Categories
-                        <img class="bg-mainColor" src="../img/Slider.png" alt="">
+                        <img class=" rounded-sm bg-[#0F67B1] lg:bg-[#134B70] w-[50px] h-[50px] p-1"  src="../img/Slider.png" id="button-drop" alt="">
                     </li>
                     <li><a class="hover:text-mainColor" href="#">Home</a></li>
                     <li><a class="hover:text-mainColor" href="#">Cataloge</a></li>
                     <li><a class="hover:text-mainColor" href="#">About</a></li>
                     <li><a class="hover:text-mainColor" href="#">Contact</a></li>
                 </ul>
-    
-                <ul id="categoriesDropdown" class="hidden top-[25%] left-3 w-[35vw] h-[50%] absolute flex flex-col justify-evenly gap-2 text-mainColor bg-white p-4 rounded-lg">
-                    <li><a href="#">Category 1</a></li>
-                    <li><a href="#">Category 2</a></li>
-                    <li><a href="#">Category 3</a></li>
-                    <li><a href="#">Category 4</a></li>
-                    <li><a href="#">Category 5</a></li>
-                    <li><a href="#">Category 6</a></li>
+
+                <ul id="categoriesDropdown"
+                    class="hidden top-[10%] lg:top-[21vh] left-0 lg:w-[25vw] w-[32vw] h-[85vh] lg:h-[80vh] absolute flex bg-mainColor flex-col justify-evenly gap-1 text-white pl-3 py-4 lg:p-4 rounded-lg z-50">
+                    <li><a href="#" class="categorieButton phone flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/PhoneCase.png" alt=""> Phone</a></li>
+                    <li><a href="#" class="categorieButton laptop flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/Laptop.png" alt=""> Laptop</a></li>
+                    <li><a href="#" class="categorieButton ipad flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/iPadMini.png" alt=""> Ipad</a></li>
+                    <li><a href="#" class="categorieButton mouse flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/Mouse.png" alt=""> Mouse</a></li>
+                    <li><a href="#" class="categorieButton watch flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/WomenWatch.png" alt=""> Smart watch</a></li>
+                    <li><a href="#" class="categorieButton headphone flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/AirPodsProMax.png" alt="">Headphones</a></li>
+                    <li><a href="#" class="categorieButton cases flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/PhoneCase.png" alt="">Cases</a></li>
+                    <li><a href="#" class="categorieButton computer flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/Workstation.png" alt="">Computer</a></li>
                 </ul>
             </div>
         </div>
     </header>
-    
 
 
 
-    <section id="carouselContent" class="h-[40vh] lg:h-screen"  aria-label="Image Carousel" >
+
+    <section id="carouselContent" class="h-[40vh] lg:h-screen" aria-label="Image Carousel">
         <div class="carousel   relative">
-            <button class="carousel-btn prev" data-carousel-btn>&#8612;</button>
-            <button class="carousel-btn next" data-carousel-btn>&#8614;</button>
+            <!-- <button class="carousel-btn prev" data-carousel-btn>&#8612;</button>
+            <button class="carousel-btn next" data-carousel-btn>&#8614;</button> -->
             <ul>
-                <li class="slide" data-active>
-                    <img class="w-screen" src="../img/1carousel.png" alt="">
+                <li class="slide h-[245px]  lg:h-[80vh]" data-active>
+                    <img class="w-screen h-[245px]  lg:h-[81vh]"
+                        src="https://images.pexels.com/photos/5625005/pexels-photo-5625005.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
                 </li>
-                <li class="slide">
-                    <img class="w-screen" src="../img/2carousel.png" alt="">
+                <li class="slide h-[245px]  lg:h-[80vh]">
+                    <img class="w-screen h-[245px] lg:h-[80vh]"
+                        src="https://images.unsplash.com/photo-1576748872293-f4972ceda096?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
                 </li>
-                <li class="slide">
-                    <img class="w-screen" src="../img/3carousel.png" alt="">
+                <li class="slideh-[245px]  lg:h-[80vh]">
+                    <img class="w-screen h-[245px] lg:h-[80vh]" src="../img/3carousel.png" alt="">
                 </li>
-                <li class="slide">
-                    <img class="w-screen" src="../img/4carousel.png" alt="">
+                <li class="slide h-[245px]  lg:h-[80vh]">
+                    <img class="w-screen h-[245px] lg:h-[80vh]" src="../img/4carousel.png" alt="">
                 </li>
             </ul>
         </div>
@@ -100,9 +116,10 @@
 
 
 
- 
+
     <div class="tabs-container">
-        <div id="productContainer" class="p-[5.9vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <div id="productContainer" class=" p-[5.9vw] lg:pt-[0] grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        </div>
         <div class="pagination flex justify-center items-center gap-4 mt-4">
             <span id="pageIndicator" class="text-lg"></span>
         </div>
@@ -126,11 +143,17 @@
                 </div>
                 <div class="w-[55%] h-full flex flex-col justify-center ">
                     <h2 class="text-2xl">Title</h2>
-                    <p class="text-[10px] max-sm:text-[8px]">description description description description description description description</p>
-                    <div class="flex items-center gap-5"><input type="number" class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="1"><h3 class="max-sm:hidden">Type RAM/PROCESSEUR</h3></div>
+                    <p class="text-[10px] max-sm:text-[8px]">description description description description description
+                        description description</p>
+                    <div class="flex items-center gap-5"><input type="number"
+                            class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="1">
+                        <h3 class="max-sm:hidden">Type RAM/PROCESSEUR</h3>
+                    </div>
                 </div>
-                <div  class="w-[20%] h-full flex flex-col justify-end items-end p-2">
-                    <div class="w-full h-[90%] flex justify-end items-center pr-4"><i class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton" onclick="removeOrder(this)"></i></div>
+                <div class="w-[20%] h-full flex flex-col justify-end items-end p-2">
+                    <div class="w-full h-[90%] flex justify-end items-center pr-4"><i
+                            class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton"
+                            onclick="removeOrder(this)"></i></div>
                     <h3 class="priceOrder text-[#5b5b5b]">250$</h3>
                 </div>
             </div>
@@ -141,11 +164,17 @@
                 </div>
                 <div class="w-[55%] h-full flex flex-col justify-center ">
                     <h2 class="text-2xl">Title</h2>
-                    <p class="text-[10px] max-sm:text-[8px]">description description description description description description description</p>
-                    <div class="flex items-center gap-5"><input type="number" class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="1"><h3 class="max-sm:hidden">Type RAM/PROCESSEUR</h3></div>
+                    <p class="text-[10px] max-sm:text-[8px]">description description description description description
+                        description description</p>
+                    <div class="flex items-center gap-5"><input type="number"
+                            class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="1">
+                        <h3 class="max-sm:hidden">Type RAM/PROCESSEUR</h3>
+                    </div>
                 </div>
-                <div  class="w-[20%] h-full flex flex-col justify-end items-end p-2">
-                    <div class="w-full h-[90%] flex justify-end items-center pr-4"><i class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton" onclick="removeOrder(this)"></i></div>
+                <div class="w-[20%] h-full flex flex-col justify-end items-end p-2">
+                    <div class="w-full h-[90%] flex justify-end items-center pr-4"><i
+                            class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton"
+                            onclick="removeOrder(this)"></i></div>
                     <h3 class="priceOrder text-[#5b5b5b]">250$</h3>
                 </div>
             </div>
@@ -156,11 +185,17 @@
                 </div>
                 <div class="w-[55%] h-full flex flex-col justify-center ">
                     <h2 class="text-2xl">Title</h2>
-                    <p class="text-[10px] max-sm:text-[8px]">description description description description description description description</p>
-                    <div class="flex items-center gap-5"><input type="number" class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="1"><h3 class="max-sm:hidden">Type RAM/PROCESSEUR</h3></div>
+                    <p class="text-[10px] max-sm:text-[8px]">description description description description description
+                        description description</p>
+                    <div class="flex items-center gap-5"><input type="number"
+                            class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="1">
+                        <h3 class="max-sm:hidden">Type RAM/PROCESSEUR</h3>
+                    </div>
                 </div>
-                <div  class="w-[20%] h-full flex flex-col justify-end items-end p-2">
-                    <div class="w-full h-[90%] flex justify-end items-center pr-4"><i class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton" onclick="removeOrder(this)"></i></div>
+                <div class="w-[20%] h-full flex flex-col justify-end items-end p-2">
+                    <div class="w-full h-[90%] flex justify-end items-center pr-4"><i
+                            class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton"
+                            onclick="removeOrder(this)"></i></div>
                     <h3 class="priceOrder text-[#5b5b5b]">250$</h3>
                 </div>
             </div>
@@ -219,25 +254,29 @@
                 <a href="#">
                     <div
                         class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400">
-                        <i class="fa-brands fa-facebook-f text-white text-3xl"></i></div>
+                        <i class="fa-brands fa-facebook-f text-white text-3xl"></i>
+                    </div>
                 </a>
 
                 <a href="#">
                     <div
                         class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400">
-                        <i class="fa-brands fa-twitter text-white text-3xl"></i></div>
+                        <i class="fa-brands fa-twitter text-white text-3xl"></i>
+                    </div>
                 </a>
 
                 <a href="#">
                     <div
                         class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400">
-                        <i class="fa-brands fa-linkedin text-white text-3xl"></i></div>
+                        <i class="fa-brands fa-linkedin text-white text-3xl"></i>
+                    </div>
                 </a>
 
                 <a href="#">
                     <div
                         class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400">
-                        <i class="fa-brands fa-github text-white text-3xl"></i></div>
+                        <i class="fa-brands fa-github text-white text-3xl"></i>
+                    </div>
                 </a>
 
             </div>
@@ -246,10 +285,10 @@
         <div class="col-span-full flex justify-center items-center">
             <h6 class="text-white text-center">© 2024 Codebenders. All rights reserved</h6>
         </div>
-        
+
 
     </footer>
-
+    <script src="/js/recherche.js"></script>
     <script src="../js/catalogue.js"></script>
     <script src="../js/script.js"></script>
 
