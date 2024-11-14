@@ -63,7 +63,8 @@
                     <li id="buttonCategories"
                         class="top-[10vh] lg:top-[14vh] absolute flex items-center lg:left-20 cursor-pointer gap-2 pl-3 lg:pl-0">
                         Categories
-                        <img class=" rounded-sm bg-[#0F67B1] lg:bg-[#134B70] w-[50px] h-[50px] p-1"  src="../img/Slider.png" id="button-drop" alt="">
+                        <img class=" rounded-sm bg-[#0F67B1] lg:bg-[#134B70] w-[50px] h-[50px] p-1"
+                            src="../img/Slider.png" id="button-drop" alt="">
                     </li>
                     <li><a class="hover:text-mainColor" href="#">Home</a></li>
                     <li><a class="hover:text-mainColor" href="#">Cataloge</a></li>
@@ -73,14 +74,31 @@
 
                 <ul id="categoriesDropdown"
                     class="hidden top-[10%] lg:top-[21vh] left-0 lg:w-[25vw] w-[32vw] h-[85vh] lg:h-[80vh] absolute flex bg-mainColor flex-col justify-evenly gap-1 text-white pl-3 py-4 lg:p-4 rounded-lg z-50">
-                    <li><a href="#" class="categorieButton phone flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/PhoneCase.png" alt=""> Phone</a></li>
-                    <li><a href="#" class="categorieButton laptop flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/Laptop.png" alt=""> Laptop</a></li>
-                    <li><a href="#" class="categorieButton ipad flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/iPadMini.png" alt=""> Ipad</a></li>
-                    <li><a href="#" class="categorieButton mouse flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/Mouse.png" alt=""> Mouse</a></li>
-                    <li><a href="#" class="categorieButton watch flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/WomenWatch.png" alt=""> Smart watch</a></li>
-                    <li><a href="#" class="categorieButton headphone flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/AirPodsProMax.png" alt="">Headphones</a></li>
-                    <li><a href="#" class="categorieButton cases flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/PhoneCase.png" alt="">Cases</a></li>
-                    <li><a href="#" class="categorieButton computer flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/Workstation.png" alt="">Computer</a></li>
+                    <button class="categorieButton"><a href="#"
+                            class=" phone flex lg:h-[70%] lg:w-[70%] items-center" data-category="phone"><img
+                                class="hidden lg:block" src="../img/PhoneCase.png" alt=""> Phone</a></button>
+                    <button class="categorieButton"><a href="#"
+                            class=" laptop flex lg:h-[70%] lg:w-[70%] items-center" data-category="laptop"><img
+                                class="hidden lg:block" src="../img/Laptop.png" alt=""> Laptop</a></button>
+                    <button class="categorieButton"><a href="#"
+                            class=" ipad flex lg:h-[70%] lg:w-[70%] items-center" data-category="ipad"><img
+                                class="hidden lg:block" src="../img/iPadMini.png" alt=""> Ipad</a></button>
+                    <button class="categorieButton"><a href="#"
+                            class=" mouse flex lg:h-[70%] lg:w-[70%] items-center" data-category="mouse"><img
+                                class="hidden lg:block" src="../img/Mouse.png" alt=""> Mouse</a></button>
+                    <button class="categorieButton"><a href="#"
+                            class=" watch flex lg:h-[70%] lg:w-[70%] items-center" data-category="watch"><img
+                                class="hidden lg:block" src="../img/WomenWatch.png" alt=""> Smart watch</a></button>
+                    <button class="categorieButton"><a href="#"
+                            class=" headphone flex lg:h-[70%] lg:w-[70%] items-center" data-category="headphone"><img
+                                class="hidden lg:block" src="../img/AirPodsProMax.png" alt="">Headphones</a></button>
+                    <button class="categorieButton"><a href="#"
+                            class="cases flex lg:h-[70%] lg:w-[70%] items-center" data-category="case"><img
+                                class="hidden lg:block" src="../img/PhoneCase.png" alt="">Cases</a></button>
+                    <button class="categorieButton"><a href="#"
+                            class=" computer flex lg:h-[70%] lg:w-[70%] items-center" data-category="computer"><img
+                                class="hidden lg:block" src="../img/Workstation.png" alt="">Computer</a></button>
+                                <button class="categorieButton">All</button>
                 </ul>
             </div>
         </div>
