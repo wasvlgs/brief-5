@@ -1,0 +1,57 @@
+/*pour animation publi*/
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px; 
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/***************************************/
+#carousel {
+    display: flex;
+    transform: translateX(0%);
+}
+
+#carousel > div {
+    flex: 0 0 auto;
+    min-width: calc(45%  ); 
+}
+/********/
+#curs {
+  display: flex;
+  transform: translateX(0%);
+}
+.carousel-item {
+  flex: 0 0 auto;
+  min-width: calc(45%); 
+}
+
+/*********animation brand***********/
+
+@keyframes rightToLeft {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  @keyframes leftToRight {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .animate-right-to-left {
+    animation: rightToLeft 10s linear infinite;
+  }
+
+  .animate-left-to-right {
+    animation: leftToRight 10s linear infinite;
+  }
