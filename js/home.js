@@ -103,12 +103,12 @@ document.addEventListener("DOMContentLoaded", () => {
             productGrid.innerHTML = "";
             for (let i = 0; i < 8; i++) {
                 productGrid.innerHTML += `
-                    <div class=" mt-5 flex-shrink-0 h-auto flex flex-col justify-around max-w-[200px]">
-                        <img src="${products[i].image}" alt="${products[i].name}" class="mt-4 w-full h-40 rounded-lg shadow-md">
+                    <div class=" bg-white rounded-l flex-shrink-0 h-auto flex flex-col items-center justify-between  max-w-[230px] px-4 py-2">
+                        <img src="${products[i].image}" alt="${products[i].name}" class="w-full h-40  shadow-md">
                         <h2 class="mt-2 text-xl font-semibold">${products[i].name}</h2>
                         <p class="mt-1 text-lg text-gray-700">${products[i].description}</p>
                         <p class="text-lg text-gray-500 mt-2">* Free shipping</p>
-                        <button class="mt-4 bg-[#0F67B1] text-white font-semibold py-2 mx-10 rounded-full hover:bg-blue-600 transition duration-200">Buy Now</button>    
+                        <button class="mt-4 bg-[#0F67B1] text-white font-semibold py-2 px-6 mx-10 mb-2 rounded-full hover:bg-blue-600 transition duration-200">Discover</button>    
                     </div>
                 `;
             }
@@ -117,35 +117,35 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /****pour add Deal-of-the-Day */
+let c = 0;
+
+let curr = 0;
+function move(direction) {
+    const carousel = document.getElementById("carousell");
+    const totalItems = carousel.children.length;
+    const itemsPerView = window.innerWidth < 640 ? 1 : 3; // 1 item for mobile, 3 items for larger screens
+
+    curr = (curr + direction + Math.ceil(totalItems / itemsPerView)) % Math.ceil(totalItems / itemsPerView);
+    carousel.style.transform = `translateX(-${curr * (100 / itemsPerView)}%)`;
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     fetch("js/data.json")
         .then(response => response.json())
         .then(products => {
-            const productGrid = document.getElementById("curs");
-            productGrid.innerHTML = ""; 
-
+            const productGrid = document.getElementById("carousell");
+            productGrid.innerHTML = "";
             products.slice(0, 8).forEach(product => {
-
                 productGrid.innerHTML += `
-                <div class= "carousel-item mt-5 flex-shrink-0 h-auto flex flex-col justify-around max-w-[500px]">
-                   <img src="${product.image}" alt="${product.name}" class="mt-4 w-full h-40 rounded-lg shadow-md">
-                    <h2 class="mt-4 text-xl font-semibold">${product.name}</h2>
-                    <p class="mt-4 text-lg text-gray-700">${product.description}</p>
-                    <p class="text-lg text-gray-500 mt-2">* Free shipping</p>
-                    <button class="mt-4 bg-[#0F67B1] text-white font-semibold py-2 mx-20 rounded-full hover:bg-blue-600 transition duration-200">Buy Now</button>
-                </div>
+                    <div class="carousel-item rounded-l flex-shrink-0 h-auto flex flex-col items-center justify-between bg-white px-4 py-2">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-40  shadow-md">
+                        <h2 class="mt-2 text-xl font-semibold">${product.name}</h2>
+                        <p class="mt-1 text-lg text-gray-700">${product.description}</p>
+                        <p class="text-lg text-gray-500 mt-2">* Free shipping</p>
+                        <button class="mt-4 bg-[#0F67B1] text-white font-semibold px-6 py-2 mb-2 mx-10 rounded-full hover:bg-blue-600 transition duration-200">Discover</button>
+                    </div>
                 `;
-
             });
         })
         .catch(error => console.error("Error fetching data:", error));
 });
-
-let c = 0;
-function move(direction) {
-    const carousel = document.getElementById("curs");
-    const totalSlides = carousel.children.length;
-    c = (c + direction + totalSlides) % totalSlides;
-    carousel.style.transform = `translateX(-${c * 100}%)`;
-}

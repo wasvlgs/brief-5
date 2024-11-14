@@ -27,15 +27,21 @@
     min-width: calc(45%  ); 
 }
 /********/
-#curs {
+#carousel {
   display: flex;
   transform: translateX(0%);
 }
+
 .carousel-item {
-  flex: 0 0 auto;
-  min-width: calc(45%); 
+  width: 100%; /* Default width for mobile */
+  max-width: calc(100% / 2); /* Show 1 item on small screens */
 }
 
+@media (min-width: 640px) {
+  .carousel-item {
+      max-width: calc(100% / 4); /* Show 3 items per view on larger screens */
+  }
+}
 /*********animation brand***********/
 
 @keyframes rightToLeft {
