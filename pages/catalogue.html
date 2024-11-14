@@ -55,12 +55,9 @@
         </div>
 
         <div class="flex w-full h-1/2 justify-center items-end">
-            <div
-                class="w-[50%] h-[45px] bg-mainColor lg:bg-white rounded-t-[20px] max-xl:w-[70%] max-lg:bg-transparent">
-                <ul id="listNavbar"
-                    class="w-full h-full flex items-center justify-center gap-20 text-black font-medium  max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400 z-50">
-                    <li id="buttonCategories"
-                        class="top-[10vh] lg:top-[14vh] absolute flex items-center lg:left-20 cursor-pointer gap-2 pl-3 lg:pl-0">
+            <div class="w-[50%] h-[45px] bg-mainColor lg:bg-white rounded-t-[20px] max-xl:w-[70%] max-lg:bg-transparent">
+                <ul id="listNavbar" class="w-full h-full flex items-center justify-center gap-20 text-black font-medium  max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400 z-50">
+                    <li id="buttonCategories" class="absolute flex items-center left-20 hover:text-mainColor cursor-pointer">
                         Categories
                         <img class=" rounded-sm bg-[#0F67B1] lg:bg-[#134B70] w-[50px] h-[50px] p-1"  src="../img/Slider.png" id="button-drop" alt="">
                     </li>
@@ -69,17 +66,14 @@
                     <li><a class="hover:text-mainColor" href="#">About</a></li>
                     <li><a class="hover:text-mainColor" href="#">Contact</a></li>
                 </ul>
-
-                <ul id="categoriesDropdown"
-                    class="hidden top-[10%] lg:top-[21vh] left-0 lg:w-[25vw] w-[32vw] h-[85vh] lg:h-[80vh] absolute flex bg-mainColor flex-col justify-evenly gap-1 text-white pl-3 py-4 lg:p-4 rounded-lg z-50">
-                    <li><a href="#" class="categorieButton phone flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/PhoneCase.png" alt=""> Phone</a></li>
-                    <li><a href="#" class="categorieButton laptop flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/Laptop.png" alt=""> Laptop</a></li>
-                    <li><a href="#" class="categorieButton ipad flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/iPadMini.png" alt=""> Ipad</a></li>
-                    <li><a href="#" class="categorieButton mouse flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/Mouse.png" alt=""> Mouse</a></li>
-                    <li><a href="#" class="categorieButton watch flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/WomenWatch.png" alt=""> Smart watch</a></li>
-                    <li><a href="#" class="categorieButton headphone flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/AirPodsProMax.png" alt="">Headphones</a></li>
-                    <li><a href="#" class="categorieButton cases flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/PhoneCase.png" alt="">Cases</a></li>
-                    <li><a href="#" class="categorieButton computer flex lg:h-[70%] lg:w-[70%] items-center"><img class="hidden lg:block" src="../img/Workstation.png" alt="">Computer</a></li>
+    
+                <ul id="categoriesDropdown" class="hidden top-[25%] left-3 w-[35vw] h-[50%] absolute flex bg-mainColor flex-col justify-evenly gap-2 text-white p-4 rounded-lg z-50">
+                    <li><a href="#">Category 1</a></li>
+                    <li><a href="#">Category 2</a></li>
+                    <li><a href="#">Category 3</a></li>
+                    <li><a href="#">Category 4</a></li>
+                    <li><a href="#">Category 5</a></li>
+                    <li><a href="#">Category 6</a></li>
                 </ul>
             </div>
         </div>
@@ -94,14 +88,10 @@
             <button class="carousel-btn next" data-carousel-btn>&#8614;</button> -->
             <ul>
                 <li class="slide h-[245px]  lg:h-[80vh]" data-active>
-                    <img class="w-screen h-[245px]  lg:h-[81vh]"
-                        src="https://images.pexels.com/photos/5625005/pexels-photo-5625005.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt="">
+                    <img class="w-screen h-[245px]  lg:h-[81vh]" src="https://images.pexels.com/photos/5625005/pexels-photo-5625005.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
                 </li>
                 <li class="slide h-[245px]  lg:h-[80vh]">
-                    <img class="w-screen h-[245px] lg:h-[80vh]"
-                        src="https://images.unsplash.com/photo-1576748872293-f4972ceda096?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="">
+                    <img class="w-screen h-[245px] lg:h-[80vh]" src="https://images.unsplash.com/photo-1566997560041-002fd549180b?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                 </li>
                 <li class="slideh-[245px]  lg:h-[80vh]">
                     <img class="w-screen h-[245px] lg:h-[80vh]" src="../img/3carousel.png" alt="">
@@ -118,8 +108,7 @@
 
 
     <div class="tabs-container">
-        <div id="productContainer" class=" p-[5.9vw] lg:pt-[0] grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        </div>
+        <div id="productContainer" class=" p-[5.9vw] lg:pt-[0] grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         <div class="pagination flex justify-center items-center gap-4 mt-4">
             <span id="pageIndicator" class="text-lg"></span>
         </div>
@@ -134,10 +123,10 @@
             <h2>Your Orders</h2>
         </div>
 
-        <div class="cardOrders w-full h-[65%] p-2 flex flex-col gap-2 overflow-y-auto">
+        <div id="ordersAfficher" class="cardOrders w-full h-[65%] p-2 flex flex-col gap-2 overflow-y-auto">
 
 
-            <div class="order w-full min-h-[100px]  bg-white rounded-[10px] flex  max-sm:min-h-[120px]">
+            <!-- <div class="order w-full min-h-[100px]  bg-white rounded-[10px] flex  max-sm:min-h-[120px]">
                 <div class="w-[25%] h-full flex justify-center items-center p-2">
                     <img src="../img/productOrder.svg" class="w-full h-full">
                 </div>
@@ -198,7 +187,7 @@
                             onclick="removeOrder(this)"></i></div>
                     <h3 class="priceOrder text-[#5b5b5b]">250$</h3>
                 </div>
-            </div>
+            </div> -->
 
 
         </div>

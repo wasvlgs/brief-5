@@ -34,3 +34,10 @@ body{
 form label{
     box-shadow: 0px 0px 8px 0px var(--titleColor);
 }
+
+
+@media (min-width:1024px) {
+    #listNavbar{
+        display: flex
+    };
+}

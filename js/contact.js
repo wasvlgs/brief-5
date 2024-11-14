@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     let test = true;
 
     getForm.addEventListener("submit",(e)=>{
-        if(getFirstName.value == "" && typeof(parseInt(getFirstName.value)) == "number"){
+        if(getFirstName.value.trim() == "" && typeof(parseInt(getFirstName.value)) == "number"){
             e.preventDefault();
             getFirstName.parentElement.style.border = "2px solid red";
             test = false;
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             getFirstName.parentElement.style.border = "none";
             test = true;
         }
-         if(getLastName.value == ""){
+         if(getLastName.value.trim() == ""){
             e.preventDefault();
             getLastName.parentElement.style.border = "2px solid red";
             test = false;
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             getLastName.parentElement.style.border = "none";
             test = true;
         }
-         if(getEmail.value == ""){
+         if(getEmail.value.trim() == ""){
             e.preventDefault();
             getEmail.parentElement.style.border = "2px solid red";
             test = false;
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             getEmail.parentElement.style.border = "none";
             test = true;
         }
-         if(getNumber.value == ""){
+         if(getNumber.value.trim() == ""){
             e.preventDefault();
             getNumber.parentElement.style.border = "2px solid red";
             test = false;
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             getNumber.parentElement.style.border = "none";
             test = true;
         }
-         if(getMessage.value == ""){
+         if(getMessage.value.trim() == ""){
             e.preventDefault();
             getMessage.parentElement.style.border = "2px solid red";
             test = false;
