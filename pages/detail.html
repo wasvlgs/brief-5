@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/detail.css" />
     <link rel="stylesheet" href="../css/output.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -161,23 +167,22 @@
 
         <div class="flex flex-col justify-between">
           <div>
-            <h1 id="product-title" class="font-bold text-2xl lg:text-7xl my-4">
+            <h1 id="product-title" class="font-bold text-2xl lg:text-5xl my-4">
               PLAYSTATION 5
             </h1>
             <h3
               id="product-description"
-              class="font-semibold text-md lg:text-4xl my-4 lg:my-8"
+              class="font-semibold text-md lg:text-2xl my-4 lg:my-8"
             >
               SONY 5DIGITAL EDITION CONSOLE SLIM
             </h3>
-            <h4 id="product-price" class="text-xl lg:text-4xl my-4 lg:my-2">
+            <h4 id="product-price" class="text-xl lg:text-3xl my-4 lg:my-2">
               $599.00
             </h4>
           </div>
 
           <div
-            class="grid grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-x-14 mt-6 lg:mt-0"
-          >
+            class="grid grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-x-14 mt-6 lg:mt-0">
             <div>
               <span
                 class="text-white lg:w-[80%] bg-blue-500 hover:bg-[#134B70] flex justify-around items-center shadow-2xl font-medium rounded-[1.5rem] text-md lg:text-3xl px-4 lg:px-2 py-3 lg:py-3"
@@ -188,15 +193,93 @@
               </span>
             </div>
             <button
-              class="text-white lg:w-[80%] bg-blue-500 hover:bg-[#134B70] shadow-2xl font-bold rounded-[1.5rem] text-[0.7rem] lg:text-2xl px-4 lg:px-2 py-3 lg:py-3 lg:ml-8"
-            >
+              class="text-white lg:w-[80%] bg-blue-500 hover:bg-[#134B70] shadow-2xl font-bold rounded-[1.5rem] text-[0.7rem] lg:text-2xl px-4 lg:px-2 py-3 lg:py-3 lg:ml-8">
               Add to cart
             </button>
             <button
-              class="text-white lg:w-[80%] bg-blue-500 hover:bg-[#134B70] shadow-2xl font-bold rounded-[1.5rem] text-[0.75rem] lg:text-2xl px-4 lg:px-2 py-3 lg:py-3 lg:ml-12"
-            >
+              id="customizeBtn"
+              class="text-white lg:w-[80%] bg-blue-500 hover:bg-[#134B70] shadow-2xl font-bold rounded-[1.5rem] text-[0.75rem] lg:text-2xl px-4 lg:px-2 py-3 lg:py-3 lg:ml-12">
               Customize
             </button>
+            <div
+            id="addModal"
+            class="hidden fixed inset-0 z-50 flex justify-center items-center">
+            <div class="absolute inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm"></div>
+            
+            <div class="relative p-4 w-full max-w-md max-h-full z-10">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal header -->
+                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                            Customize Your Product
+                        </h3>
+                        <button
+                            id="closeModal"
+                            class="text-gray-600 hover:text-black"
+                            aria-label="Close task creation modal">
+                            ✕
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <form class="p-4 md:p-5">
+                        <div class="grid gap-4 mb-4 grid-cols-1">
+                            <div class="col-span-2 sm:col-span-1">
+                                <label
+                                    for="category"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                    Hadr Disk
+                                </label>
+                                <select
+                                    id="category"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                    <option disabled selected="">Choose option</option>
+                                    <option value="TV">250 GB</option>
+                                    <option value="PC">500 GB</option>
+                                    <option value="GA">1 TB</option>
+                                </select>
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <label
+                                    for="category"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                    Graphic Card
+                                </label>
+                                <select
+                                    id="category"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                    <option disabled selected="">Choose option</option>
+                                    <option value="TV"> RTX 4090</option>
+                                    <option value="PC">Nvidia GeForce RTX 4060</option>
+                                    <option value="GA">AMD Ryzen 7 5800X3D</option>
+                                    <option value="PH">AMD Ryzen 5 7600X</option>
+                                </select>
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                              <label
+                                  for="category"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                  RAM
+                              </label>
+                              <select
+                                  id="category"
+                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                  <option disabled selected="">Choose option</option>
+                                  <option value="TV">8 GB</option>
+                                  <option value="PC">16 GB</option>
+                                  <option value="GA">32 GB</option>
+                              </select>
+                          </div>
+                        </div>
+                        <button
+                            type="submit"
+                            class="text-white inline-flex items-center bg-blue-500 hover:bg-[#134B70] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                            Confirm
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
           </div>
 
           <div class="border-solid bg-stone-500 h-0.5 mt-8 lg:my-4"></div>

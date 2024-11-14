@@ -1,7 +1,19 @@
+// cutomize button
+let openCustomize = document.getElementById("customizeBtn");
+let closeModal = document.getElementById("closeModal");
+let addModal = document.getElementById("addModal");
+
+openCustomize.onclick = function(){
+  addModal.classList.remove("hidden");
+};
+closeModal.onclick = function(){
+  addModal.classList.add("hidden");
+};
+
 fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            let getCard = data[0];
+            let getCard = data[6];
 
 
   document.getElementById("product-title").textContent = getCard.name;
@@ -26,6 +38,7 @@ fetch('data.json')
 
         displayProduct()
 window.onload = displayProduct;
+
 
 // slide
 let currentIndex = 0;
