@@ -10,10 +10,65 @@ closeModal.onclick = function(){
   addModal.classList.add("hidden");
 };
 
+let productNumber = document.getElementById("productNumber");
+let plusProduct = document.getElementById("plus");
+let minusProduct = document.getElementById("minus");
+let productCounter = 1;
+let totalPrice = 0;
+const minProduct = 1;
+const maxProduct = 10;
+
+function getPrice() {
+  const priceProduct = document.getElementById("product-price");
+  if (priceProduct) {
+      return parseFloat(priceProduct.textContent.replace('$', ''));
+  }
+  return 0;
+}
+
+function updateCounter() {
+
+  productNumber.textContent = productCounter;
+
+  const basePrice = getPrice();
+  totalPrice = basePrice * productCounter;
+  const priceElement = document.getElementById("product-price");
+  if (priceElement) {
+    priceElement.textContent = `$${totalPrice.toFixed(2)}`;
+  }
+
+  if (minusProduct){
+    minusProduct.disabled = productCounter <= minProduct;
+  }
+  
+  if (plusProduct){
+    plusProduct.disabled = productCounter >= maxProduct;
+  }
+  
+}
+
+if (plusProduct) {
+  plusProduct.addEventListener("click", () => {
+      if (productCounter < maxProduct){
+          productCounter++;
+          updateCounter();
+      }
+});
+}
+
+if (minusProduct) {
+  minusProduct.addEventListener("click", () => {
+      if (productCounter > minProduct){
+          productCounter--;
+          updateCounter();
+      }
+});
+}
+
 fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            let getCard = data[6];
+            let getCard = data[2];
 
 
   document.getElementById("product-title").textContent = getCard.name;
@@ -75,3 +130,6 @@ thumbnails.forEach((thumbnail, index) => {
 });
 
 thumbnails[0].classList.add("thumbnail-active");
+
+updateCounter();
+
