@@ -4,10 +4,21 @@
 let panierCards = [];
 
 
+// ====================== save data =======================
+
+function updateStorage(){
+    localStorage.setItem("paniesData", JSON.stringify(panierCards));
+}
 
 
 
 document.addEventListener("DOMContentLoaded",()=>{
+
+    if(JSON.parse(localStorage.getItem("paniesData"))){
+        panierCards = JSON.parse(localStorage.getItem("paniesData"));
+        console.log(panierCards)
+    }
+    afficherPanies();
 
 // ======================== open NavBar ====================
 
@@ -109,6 +120,8 @@ function getCountOrder(){
                 }
                 let count = allInputsCount.value;
                 ordersCalcule(count);
+    updateStorage();
+
             }
         }
     }
@@ -135,6 +148,7 @@ function removeOrder(element){
         }
     }
     element.parentElement.parentElement.parentElement.remove();
+    updateStorage();
             ordersCalcule();
 }
 
@@ -169,6 +183,7 @@ async function addCardToPanier(getId,index) {
                         panierCards[i].count = getValue.value;
                     }
                 }
+                updateStorage();
                 updateCounter();
          getCountOrder();
          ordersCalcule();
@@ -197,6 +212,7 @@ async function addCardToPanier(getId,index) {
                 "ScreenSize": data[index].ScreenSize,
                 "count":1
             });
+            updateStorage();
             ordersCalcule();
         afficherPanies();
          getCountOrder();
@@ -233,7 +249,7 @@ function afficherPanies(){
         }
         ordersCalcule();
         getCountOrder(); 
-        updateCounter()
+        updateCounter();
 
 
 }
