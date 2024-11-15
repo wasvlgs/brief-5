@@ -31,15 +31,13 @@
   display: flex;
   transform: translateX(0%);
 }
-
 .carousel-item {
-  width: 100%; /* Default width for mobile */
-  max-width: calc(100% / 2); /* Show 1 item on small screens */
+  width: 100%;
+  max-width: calc(100% / 2); 
 }
-
 @media (min-width: 640px) {
   .carousel-item {
-      max-width: calc(100% / 4); /* Show 3 items per view on larger screens */
+      max-width: calc(100% / 4);
   }
 }
 /*********animation brand***********/
