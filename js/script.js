@@ -163,7 +163,7 @@ function removeOrder(element){
 
 
 
-async function addCardToPanier(getId,index,count,ram,graphic,hardDisc,color) {
+async function addCardToPanier(getId,index,count,price) {
     try {
 
         const response = await fetch('data.json');
@@ -193,11 +193,21 @@ async function addCardToPanier(getId,index,count,ram,graphic,hardDisc,color) {
             }
         }
 
+
+        if(!count){
+            count = 1;
+        }
+        if(!price){
+            price = data[index].price;
+        }
+
+
+
         if(getAnswer === true){
             panierCards.push({
                 "id": getId,
                 "name": data[index].name,
-                "price": data[index].price,
+                "price": price,
                 "description": data[index].description,
                 "image": data[index].image[0],
                 "category": data[index].category,
@@ -212,7 +222,7 @@ async function addCardToPanier(getId,index,count,ram,graphic,hardDisc,color) {
                 "GraphicsCard": data[index].GraphicsCard,
                 "ScreenSize": data[index].ScreenSize,
                 "Color": "gray",
-                "count":1
+                "count":count
             });
             updateStorage();
             ordersCalcule();
