@@ -163,7 +163,7 @@ function removeOrder(element){
 
 
 
-async function addCardToPanier(getId,index) {
+async function addCardToPanier(getId,index,count,ram,graphic,hardDisc,color) {
     try {
 
         const response = await fetch('data.json');
@@ -211,6 +211,7 @@ async function addCardToPanier(getId,index) {
                 "Processor": data[index].Processor,
                 "GraphicsCard": data[index].GraphicsCard,
                 "ScreenSize": data[index].ScreenSize,
+                "Color": "gray",
                 "count":1
             });
             updateStorage();
@@ -261,6 +262,5 @@ function afficherPanies(){
 
 
 function toDetailProduct(getId){
-    alert(getId)
     localStorage.setItem("id", getId);
 }

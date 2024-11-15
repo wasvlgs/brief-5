@@ -155,11 +155,11 @@
               class="text-white lg:w-[80%] bg-blue-500 hover:bg-[#134B70] flex justify-around items-center shadow-2xl font-medium rounded-[1.5rem] text-md lg:text-3xl px-4 lg:px-2 py-3 lg:py-3"
             >
               <button id="minus" class="mr-4 lg:mr-8 lg:text-4xl">-</button>
-              <span id="productNumber" class="flex justify-center">1</span>
+              <span id="productNumber" class="flex justify-center"></span>
               <button id="plus" class="ml-4 lg:ml-8 lg:text-4xl">+</button>
             </div>
-            <button
-              class="text-white lg:w-[80%] bg-blue-500 hover:bg-[#134B70] shadow-2xl font-bold rounded-[1.5rem] text-[0.7rem] lg:text-2xl px-4 lg:px-2 py-3 lg:py-3 lg:ml-8"
+            <button onclick="addTo(2)" 
+              class="special text-white lg:w-[80%] bg-blue-500 hover:bg-[#134B70] shadow-2xl font-bold rounded-[1.5rem] text-[0.7rem] lg:text-2xl px-4 lg:px-2 py-3 lg:py-3 lg:ml-8"
             >
               Add to cart
             </button>
@@ -208,10 +208,10 @@
                           Hadr Disk
                         </label>
                         <select
-                          id="category"
+                          id="categorypc1"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                         >
-                          <option disabled selected="">Choose option</option>
+                          
                           <option value="h1">250 GB</option>
                           <option value="h2">500 GB</option>
                           <option value="h3">1 TB</option>
@@ -225,10 +225,10 @@
                           Graphic Card
                         </label>
                         <select
-                          id="category"
+                          id="categorypc2"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                         >
-                          <option disabled selected="">Choose option</option>
+                          
                           <option value="g1">RTX 4090</option>
                           <option value="g2">Nvidia GeForce RTX 4060</option>
                           <option value="g3">AMD Ryzen 7 5800X3D</option>
@@ -243,22 +243,17 @@
                           RAM
                         </label>
                         <select
-                          id="category"
+                          id="categorypc3"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                         >
-                          <option disabled selected="">Choose option</option>
+                          
                           <option value="r1">8 GB</option>
                           <option value="r2">16 GB</option>
                           <option value="r3">32 GB</option>
                         </select>
                       </div>
                     </div>
-                    <button
-                      type="submit"
-                      class="text-white inline-flex items-center bg-blue-500 hover:bg-[#134B70] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                    >
-                      Confirm
-                    </button>
+                    
                   </form>
                 </div>
               </div>
@@ -285,7 +280,7 @@
                       Customize Your Product
                     </h3>
                     <button
-                      id="closeModal"
+                      id="closePhone"
                       class="text-gray-600 hover:text-black"
                       aria-label="Close task creation modal"
                     >
@@ -296,16 +291,16 @@
                     <div class="grid gap-4 mb-4 grid-cols-1">
                       <div class="col-span-2 sm:col-span-1">
                         <label
-                          for="category"
+                          for="categoryPhone1"
                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
                           Storage
                         </label>
                         <select
-                          id="category"
+                          id="categoryPhone1"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                         >
-                          <option disabled selected="">Choose option</option>
+
                           <option value="256">256 GB</option>
                           <option value="512">512 GB</option>
                           <option value="1">1 TB</option>
@@ -313,44 +308,39 @@
                       </div>
                       <div class="col-span-2 sm:col-span-1">
                         <label
-                          for="category"
+                          for="categoryPhone2"
                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
                           Processeur
                         </label>
                         <select
-                          id="category"
+                          id="categoryPhone2"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                         >
-                          <option disabled selected="">Choose option</option>
+
                           <option value="p1">Exynos</option>
                           <option value="p2">Snapdragon</option>
                         </select>
                       </div>
                       <div class="col-span-2 sm:col-span-1">
                         <label
-                          for="category"
+                          for="categoryPhone3"
                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
                           RAM
                         </label>
                         <select
-                          id="category"
+                          id="categoryPhone3"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                         >
-                          <option disabled selected="">Choose option</option>
+
                           <option value="r1">8 GB</option>
                           <option value="r2">16 GB</option>
                           <option value="r3">32 GB</option>
                         </select>
                       </div>
                     </div>
-                    <button
-                      type="submit"
-                      class="text-white inline-flex items-center bg-blue-500 hover:bg-[#134B70] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                    >
-                      Confirm
-                    </button>
+                    
                   </form>
                 </div>
               </div>
@@ -377,7 +367,7 @@
                       Customize Your Product
                     </h3>
                     <button
-                      id="closeModal"
+                      id="closeItems"
                       class="text-gray-600 hover:text-black"
                       aria-label="Close task creation modal"
                     >
@@ -394,22 +384,17 @@
                           Color
                         </label>
                         <select
-                          id="category"
+                          id="categoryColor"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                         >
-                          <option disabled selected="">Choose option</option>
+
                           <option value="gray">Space Gray</option>
                           <option value="silver">Silver</option>
                           <option value="white">White</option>
                         </select>
                       </div>
                     </div>
-                    <button
-                      type="submit"
-                      class="text-white inline-flex items-center bg-blue-500 hover:bg-[#134B70] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                    >
-                      Confirm
-                    </button>
+                    
                   </form>
                 </div>
               </div>
