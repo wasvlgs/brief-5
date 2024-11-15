@@ -4,10 +4,21 @@
 let panierCards = [];
 
 
+// ====================== save data =======================
+
+function updateStorage(){
+    localStorage.setItem("paniesData", JSON.stringify(panierCards));
+}
 
 
 
 document.addEventListener("DOMContentLoaded",()=>{
+
+    if(JSON.parse(localStorage.getItem("paniesData"))){
+        panierCards = JSON.parse(localStorage.getItem("paniesData"));
+        console.log(panierCards)
+    }
+    afficherPanies();
 
 // ======================== open NavBar ====================
 
@@ -101,9 +112,16 @@ function getCountOrder(){
             if(allInputsCount.value < 1){
                 allInputsCount.value = 1;
             }else{
-                let getParent = allInputsCount
-                count = allInputsCount.value;
+                let getParent = allInputsCount.parentElement.parentElement.parentElement;
+                for(let i = 0; i < panierCards.length; i++){
+                    if(panierCards[i].id == getParent.id){
+                        panierCards[i].count = allInputsCount.value;
+                    }
+                }
+                let count = allInputsCount.value;
                 ordersCalcule(count);
+    updateStorage();
+
             }
         }
     }
@@ -124,9 +142,14 @@ function updateCounter(){
 // ========================= remove orders =============================
 
 function removeOrder(element){
+    for(let i = 0; i < panierCards.length; i++){
+        if(element.parentElement.parentElement.parentElement.id == panierCards[i].id){
+            panierCards.splice(i,1)
+        }
+    }
     element.parentElement.parentElement.parentElement.remove();
+    updateStorage();
             ordersCalcule();
-            updateCounter();
 }
 
 
@@ -155,6 +178,17 @@ async function addCardToPanier(getId,index) {
                 getAnswer = false;
                 let getValue = cards[i].getElementsByClassName("getInputsCount")[0];
                 getValue.value = parseInt(getValue.value) + 1;
+                for(i = 0; i < panierCards.length; i++){
+                    if(panierCards[i].id == getId){
+                        panierCards[i].count = getValue.value;
+                    }
+                }
+                updateStorage();
+                updateCounter();
+         getCountOrder();
+         ordersCalcule();
+
+
             }
         }
 
@@ -178,9 +212,11 @@ async function addCardToPanier(getId,index) {
                 "ScreenSize": data[index].ScreenSize,
                 "count":1
             });
-        
+            updateStorage();
+            ordersCalcule();
         afficherPanies();
-        updateCounter();  
+         getCountOrder();
+         updateCounter()
         
         }
           
@@ -192,7 +228,7 @@ async function addCardToPanier(getId,index) {
     }
 }
 function afficherPanies(){   
-        let ordersAfficher = document.getElementById("ordersAfficher");
+        let ordersAfficher = document.getElementById("getOrdersSection");
             ordersAfficher.innerHTML = "";    
         for(let i = 0; i < panierCards.length; i++){
 
@@ -202,8 +238,8 @@ function afficherPanies(){
                         </div>
                         <div class="w-[55%] h-full flex flex-col justify-center ">
                             <h2 class="text-2xl">${panierCards[i].name}</h2>
-                            <p class="text-[10px] max-sm:text-[8px]">${panierCards[i].description}</p>utsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="${panierCards[i].count}"><h3 class="max-sm:hidden">${panierCards[i].RAM}/${panierCards[i].Processor}</h3><
-                            <div class="flex items-center gap-5"><input type="number" class="getInp/div>
+                            <p class="text-[10px] max-sm:text-[8px]">${panierCards[i].description}</p><div class="flex items-center gap-5"><input type="number" class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="${panierCards[i].count}"><h3 class="max-sm:hidden">${panierCards[i].RAM}/${panierCards[i].Processor}</h3>
+                            </div>
                         </div>
                         <div  class="w-[20%] h-full flex flex-col justify-end items-end p-2">
                             <div class="w-full h-[90%] flex justify-end items-center pr-4"><i class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton" onclick="removeOrder(this)"></i></div>
@@ -211,7 +247,9 @@ function afficherPanies(){
                         </div>
                     </div>`
         }
-                
+        ordersCalcule();
+        getCountOrder(); 
+        updateCounter();
 
 
 }
