@@ -15,20 +15,23 @@
 
 </head>
 
+
 <body>
 
     <header class="w-full h-[150px] bg-mainColor max-lg:h-[75px]">
         <div class="headerTop w-full h-1/2 flex justify-between items-center px-20 max-xl:px-10 max-lg:h-full">
             <img src="../img/logo.svg" alt="LOGO">
 
-            <div id="searchInput"
-                class="w-1/3 h-[45px] overflow-hidden rounded-[25px] flex max-xl:w-1/2 bg-white max-lg:rounded-none max-lg:h-0 max-lg:absolute max-lg:left-0 max-lg:top-[75px] transition-all duration-400 z-40">
-                <input type="text" class="w-[80%] h-full pl-6 text-black border-none outline-none"
-                    placeholder="Search...">
-                <div class="w-[20%] h-full flex justify-center items-center bg-white">
-                    <i class="fa-solid fa-magnifying-glass text-2xl text-[#838383]"></i>
-                </div>
-            </div>
+           <div class="flex flex-col gap-0 border border-dashed border-red-400 w-1/3 items-center  ">
+                <div id="searchInput" class=" h-[45px] overflow-hidden rounded-[25px] flex bg-white max-lg:rounded-none max-lg:h-0 max-lg:absolute max-lg:left-0 max-lg:top-[75px] transition-all duration-400 z-40">
+                    <input type="text" class="w-[80%] h-full pl-6 text-black border-none outline-none" placeholder="Search...">
+                    <div class="w-[20%] h-full flex justify-center items-center bg-white">
+                        <i class="fa-solid fa-magnifying-glass text-2xl text-[#838383]"></i>
+                    </div>
+                </div>  
+                <div id="product-container" class="bg-white w-1/2 max-h-[50vh] z-10 overflow-auto flex flex-col justify-center gap-y-2 absolute top-[75px]"></div> 
+           </div>
+
 
             <div class="flex items-center gap-7 buttonsHeader">
                 <i id="buttonSearch" class="fa-solid fa-magnifying-glass text-2xl text-white cursor-pointer"></i>
@@ -289,9 +292,9 @@
 
 
     </footer>
-
     <script src="../js/catalogue.js"></script>
     <script src="../js/script.js"></script>
+    <script src="/js/recherche.js"></script>
 
 </body>
 

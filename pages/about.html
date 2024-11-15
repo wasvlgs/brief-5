@@ -13,17 +13,14 @@
 
     <style>
         .shadow-extra-dark {
-          box-shadow: 45px 45px 70px rgba(0, 0, 0, 0.9);
+          box-shadow: 30px 20px 10px rgba(0, 0, 0, 0.6);
         } 
         .slider-images {
             transition: transform 0.5s ease-in-out;
         }
-        
-
-
     </style>
 </head>
-<body class="flex flex-col items-center w-full p-0 gap-6 box-border">
+<body class="flex flex-col items-center w-full p-0 gap-8 box-border">
    
     <header class="w-full h-[150px] bg-mainColor  max-lg:h-[75px]">
 
@@ -67,7 +64,7 @@
 
     </header>
 
-    <section class="flex flex-col items-center">
+    <section class="flex flex-col items-center ">
         <div><img class="w-full" src="/img/hero-about.svg" alt="Online shopping"></div>
         <div class="values bg-white relative bottom-4 flex  justify-center shadow-extra-dark overflow-auto max-sm:max-w-[200px]  max-sm:overflow-hidden">
             <img src="/img/innovation.svg" alt="innovation" class="w-1/4 sm:w-1/8 md:w-1/5">
@@ -82,7 +79,7 @@
     <!-- Start about section : heading, text, cards -->
     <section class="about flex flex-col items-center gap-14 mt-20">
         <h1 class="text-5xl font-bold text-[#0F67B1]">About Us</h1>
-        <p class="text-center p-2 text-xl">Nexio is more than an electronics company—we’re a vision for the future. Guided by innovation and sustainability, we create technology that empowers and inspires. Each Nexio product is crafted to enhance your life and shape a smarter, greener tomorrow.</p>
+        <p class="text-center w-[80%] p-2 text-xl">Nexio is more than an electronics company—we’re a vision for the future. Guided by innovation and sustainability, we create technology that empowers and inspires. Each Nexio product is crafted to enhance your life and shape a smarter, greener tomorrow.</p>
         <div class="grid md:grid-cols-3 sm:grid-cols-1 ">
             <img src="/img/clients.svg" alt="clients">
             <img src="/img/partners.svg" alt="partners">
@@ -97,7 +94,7 @@
         <div class="text-center flex flex-col gap-6 ">
             <h1 class="text-5xl font-bold text-[#0F67B1]">Our Missions</h1>
             <h3 class="font-bold p-4">Driven by Purpose, Guided by Innovation</h3>
-            <p class="p-4">Discover our mission to redefine technology with quality, sustainability, and customer focus at heart.</p>
+            <p class="text-center text-xl w-auto">Discover our mission to redefine technology with quality, sustainability, and customer focus at heart.</p>
         </div>
         <div class="grid md:grid-cols-2 sm:grid-cols-1  justify-between gap-4 ">
             <div class="flex justify-center items-center">
@@ -114,31 +111,32 @@
         </div>
     </section>
                    
-    <section class="flex flex-col justify-center items-center gap-6 mt-20">
+    <section class="flex flex-col justify-center items-center gap-6 mt-20 mx-10">
         <h1 class="text-5xl font-bold mb-10 text-[#0F67B1]">Our visions</h1>
-        <div class="visions grid grid-cols-1 md:grid-cols-4  text-center w-[80%] gap-8 mx-auto ">
-            <div class="bg-[#D9D9D9] flex flex-col  gap-4 items-center pb-8">
+        <div class="visions grid grid-cols-1 md:grid-cols-4  text-center w-full gap-8  ">
+
+            <div class="bg-[#D9D9D9] flex flex-col  gap-4 items-center pb-8  hover:bg-[#0F67B1] hover:text-white">
                 <img class="w-full" src="/img/leader.svg" alt="leader in tech"> 
                 <div class="p-4 flex flex-col gap-4">
                     <h3 class="font-bold">Lead in Technological Innovation</h3>
                     <p>To become a global leader in electronics, delivering groundbreaking technology that shapes the future and inspires our customers worldwide.</p>
                 </div>
             </div>
-            <div class="bg-[#D9D9D9] flex flex-col gap-4 items-center pb-8">
+            <div class="bg-[#D9D9D9] flex flex-col gap-4 items-center pb-8 hover:bg-[#0F67B1] hover:text-white">
                 <img class="w-full" src="/img/quality.svg" alt="leader in tech"> 
                 <div class="p-4 flex flex-col gap-4">
                     <h3 class="font-bold">Set the Standard for Quality and Excellence</h3>
                     <p>To establish Nexio as the benchmark for exceptional quality, reliability, and performance in every product category we enter.</p>
                 </div>
             </div>
-            <div class="bg-[#D9D9D9]  flex flex-col gap-4 items-center pb-8">
+            <div class="bg-[#D9D9D9]  flex flex-col gap-4 items-center pb-8 hover:bg-[#0F67B1] hover:text-white">
                 <img class="w-full" src="/img/customize.svg" alt="leader in tech"> 
                 <div class="p-4 flex flex-col gap-4">
                     <h3 class="font-bold">Empower Personalized Experiences</h3>
                     <p>To empower our customers by providing advanced, customizable solutions that fit their unique lifestyles, placing them at the heart of our innovations.</p>
                 </div>
             </div>
-            <div class="bg-[#D9D9D9]  flex flex-col gap-4 items-center pb-8">
+            <div class="bg-[#D9D9D9]  flex flex-col gap-4 items-center pb-8 hover:bg-[#0F67B1] hover:text-white">
                 <img class="w-full" src="/img/sustain.svg" alt="leader in tech"> 
                 <div class="p-4 flex flex-col gap-4">
                     <h3 class="font-bold">Champion Sustainability in Electronics</h3>
@@ -148,9 +146,9 @@
         </div>
     </section>
     
-    <section class="Collabs mt-20 space-y-8" >
-        <h1 class="text-5xl font-bold text-center text-[#0F67B1]">Our Collaborators</h1>
-        <p class="text-center p-6 text-xl">At Nexio, our partnerships with top industry leaders drive us to deliver cutting-edge, high-quality technology. Together, we bring you products that redefine innovation and excellence. Meet the brands behind Nexio’s difference</p>
+    <section class="Collabs mt-20 space-y-8 flex flex-col items-center" >
+        <h1 class="sm:text-5xl text-3xl font-bold text-center text-[#0F67B1]">Meet our collaborators</h1>
+        <p class="text-center p-6 text-xl  w-[80%]">At Nexio, our partnerships with top industry leaders drive us to deliver cutting-edge, high-quality technology. Together, we bring you products that redefine innovation and excellence. Meet the brands behind Nexio’s difference</p>
         <div class="slider-container m-auto max-w-[463px] max-h-[463px] h-full w-full overflow-hidden">
             <div id="slidemove" class="slider-images flex h-full relative right-0 transition-all duration-500">
               <img src="/img/AMD.png" alt="Image 1">
