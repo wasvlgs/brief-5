@@ -150,6 +150,7 @@ function removeOrder(element){
     element.parentElement.parentElement.parentElement.remove();
     updateStorage();
             ordersCalcule();
+            updateCounter();
 }
 
 
@@ -259,6 +260,7 @@ function afficherPanies(){
 // ======================== detail product ===================
 
 
-function toDetailProduct(){
-    
+function toDetailProduct(getId){
+    alert(getId)
+    localStorage.setItem("id", getId);
 }
