@@ -598,6 +598,18 @@ video {
   top: 25%;
 }
 
+.left-0 {
+  left: 0px;
+}
+
+.top-\[10\%\] {
+  top: 10%;
+}
+
+.top-\[10vh\] {
+  top: 10vh;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -764,6 +776,10 @@ video {
   height: 50%;
 }
 
+.h-\[85vh\] {
+  height: 85vh;
+}
+
 .max-h-\[600px\] {
   max-height: 600px;
 }
@@ -880,6 +896,14 @@ video {
   width: 35vw;
 }
 
+.w-\[32vw\] {
+  width: 32vw;
+}
+
+.w-\[50px\] {
+  width: 50px;
+}
+
 .max-w-\[500px\] {
   max-width: 500px;
 }
@@ -982,6 +1006,10 @@ video {
   gap: 1.5rem;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-y-5 {
   row-gap: 1.25rem;
 }
@@ -1028,6 +1056,10 @@ video {
 
 .rounded-\[30px\] {
   border-radius: 30px;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 
 .rounded-b-\[20px\] {
@@ -1210,6 +1242,10 @@ video {
   padding: 5.9vw;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .px-20 {
   padding-left: 5rem;
   padding-right: 5rem;
@@ -1271,6 +1307,10 @@ video {
 
 .pt-2 {
   padding-top: 0.5rem;
+}
+
+.pl-3 {
+  padding-left: 0.75rem;
 }
 
 .text-left {
@@ -1671,8 +1711,24 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:left-20 {
+    left: 5rem;
+  }
+
+  .lg\:top-\[14vh\] {
+    top: 14vh;
+  }
+
+  .lg\:top-\[21vh\] {
+    top: 21vh;
+  }
+
   .lg\:mb-2 {
     margin-bottom: 0.5rem;
+  }
+
+  .lg\:block {
+    display: block;
   }
 
   .lg\:h-14 {
@@ -1699,6 +1755,10 @@ video {
     height: 100vh;
   }
 
+  .lg\:h-\[70\%\] {
+    height: 70%;
+  }
+
   .lg\:w-10 {
     width: 2.5rem;
   }
@@ -1711,6 +1771,14 @@ video {
     width: 100vw;
   }
 
+  .lg\:w-\[25vw\] {
+    width: 25vw;
+  }
+
+  .lg\:w-\[70\%\] {
+    width: 70%;
+  }
+
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1718,6 +1786,11 @@ video {
   .lg\:bg-white {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .lg\:bg-\[\#134B70\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(19 75 112 / var(--tw-bg-opacity));
   }
 
   .lg\:p-4 {
@@ -1731,6 +1804,10 @@ video {
 
   .lg\:pt-\[0\] {
     padding-top: 0;
+  }
+
+  .lg\:pl-0 {
+    padding-left: 0px;
   }
 
   .lg\:text-lg {
