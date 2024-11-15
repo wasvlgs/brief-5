@@ -122,19 +122,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const pageProducts = filteredProducts.slice(start, end);
 
-        pageProducts.forEach((product) => {
+        pageProducts.forEach((product,index) => {
             const productCard = document.createElement("div");
             productCard.className = "w-[146px] h-[174px] lg:w-[400px] lg:h-[409px] bg-[#E6E6E6] rounded-lg shadow-lg lg:p-4 pt-2 flex flex-col items-center text-center";
+            const promotionPercentage = getRandomPromotion(); 
+            let numericPrice = parseFloat(product.price.replace('$', ''));
+            const discountedPrice = (numericPrice + (numericPrice * (promotionPercentage / 100))).toFixed(0);
+            
 
             productCard.innerHTML = `    
                     <button id="details-button">
-                        <img src="${product.image}" alt="${product.name}" class="px-4 object-fill w-screen h-[10vh] mb-4 rounded-[30px] lg:w-screen lg:px-10 lg:h-[35vh]"> 
+                        <img src="${product.image[0]}" alt="${product.name}" class="px-4 object-fill w-screen h-[10vh] mb-4 rounded-[15px] lg:w-screen lg:px-10 lg:h-[35vh]"> 
                     </button>
                     <h3 class="text-[12px] lg:text-lg font-bold mb-2">${product.name}</h3>
                     <p class="text-gray-600 lg:mb-2 text-[12px] lg:text-lg">${product.description}</p>
                     <div class="flex items-center justify-around w-full">
-                        <span class="text-[#FF0000] font-semibold lg:text-lg text-[12px]">${product.price}</span>
-                        <img data-id="${product.id}" class="lg:w-10 lg:h-14 h-[43px] w-[23px] ml-4 cursor-pointer add-to-cart" src="../img/AddShoppingCart.png" alt="Add to cart">
+                        <div class="flex flex-col lg:mt-2 justify.end">
+                       
+                        <span class="text-[#FF0000] font-semibold lg:text-lg text-[12px]">${product.price}</span> 
+                         <span class=" line-through text-black font-semibold lg:text-sm text-[8px]">$${discountedPrice} </span>
+
+                         </div>
+                         <span class="bg-[#FFD000] lg:w-12 rounded-lg text-black lg:text-sm text-[10px]">-${promotionPercentage}%</span>
+                        
+                        <img onclick="addCardToPanier(${product.id}, ${index}); alert('Product added to cart!');" data-id="${product.id}" class="lg:w-10 lg:h-14 h-[43px] w-[23px] ml-4 cursor-pointer add-to-cart" src="../img/AddShoppingCart.png" alt="Add to cart">
                     </div>
                 `;
 
@@ -143,7 +154,11 @@ document.addEventListener("DOMContentLoaded", () => {
         updatePaginationControls(category);
     }
 
-
+    function getRandomPromotion() {
+        const min = 5; 
+        const max = 50; 
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
     function updatePaginationControls(category = "All") {   
         const filteredProducts = category === "All"
