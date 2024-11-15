@@ -6,12 +6,363 @@
     <title>About - Nexio</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
+    <style>
+        .shadow-extra-dark {
+          box-shadow: 30px 20px 10px rgba(0, 0, 0, 0.6);
+        } 
+        .slider-images {
+            transition: transform 0.5s ease-in-out;
+        }
+    </style>
 </head>
-<body>
+<body class="flex flex-col items-center w-full p-0 gap-8 box-border">
+   
+    <header class="w-full h-[150px] bg-mainColor  max-lg:h-[75px]">
+
+        <div class="headerTop w-full h-1/2 flex justify-between items-center px-20 max-xl:px-10  max-lg:h-full">
+
+            <img src="../img/logo.svg" alt="LOGO">
+
+            <div id="searchInput" class="w-1/3 h-[45px] overflow-hidden rounded-[25px] flex max-xl:w-1/2 bg-white max-lg:rounded-none max-lg:h-0 max-lg:absolute max-lg:left-0 max-lg:top-[75px] transition-all duration-400">
+                <input type="text" class="w-[80%] h-full pl-6 text-black border-none outline-none" placeholder="Search...">
+                <div class="w-[20%] h-full flex justify-center items-center bg-white"><i
+                        class="fa-solid fa-magnifying-glass text-2xl text-[#838383]"></i></div>
+            </div>
+
+            <div class="flex items-center gap-7 buttonsHeader">
+                <i id="buttonSearch" class="fa-solid fa-magnifying-glass text-2xl text-white cursor-pointer"></i>
+
+                <div><i id="buttonOrders" class="fa-solid fa-cart-shopping text-3xl text-white relative cursor-pointer"><div id="counter" class="absolute w-[18px] h-[18px] rounded-[50%] bg-[red] top-[-5px] right-[-5px] flex justify-center items-center text-[10px]"></div></i></div>
+
+                <div class="w-[180px] h-[45px] bg-white flex items-center justify-between rounded-[25px] p-[2px] max-lg:hidden"><a href="#" class="w-1/2 h-full flex justify-center items-center bg-mainColor rounded-[25px] text-white">Sign Up</a><a href="#" class="w-1/2 h-full flex justify-center items-center rounded-[25px] text-mainColor font-bold">Login</a></div>
+
+
+                <i id="buttonNavbar" class="fa-solid fa-bars text-white text-2xl cursor-pointer"></i>
+            </div>
+
+        </div>
+
+        <div class="w-full h-1/2 flex justify-center items-end">
+            <div class="w-[50%] h-[45px] bg-white rounded-t-[20px]  max-xl:w-[70%] max-lg:bg-transparent">
+
+
+                <ul id="listNavbar" class="w-full h-full flex items-center justify-center gap-20 text-black font-medium max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor  max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400">
+                    <li><a class="hover:text-mainColor" href="../index.html">Home</a></li>
+                    <li><a class="hover:text-mainColor" href="catalogue.html">Cataloge</a></li>
+                    <li><a class="hover:text-mainColor" href="about.html">About</a></li>
+                    <li><a class="hover:text-mainColor" href="contact.html">Contact</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+
+    </header>
+
+    <section class="flex flex-col items-center ">
+        <div><img class="w-full" src="/img/hero-about.svg" alt="Online shopping"></div>
+        <div class="values bg-white relative bottom-4 flex  justify-center shadow-extra-dark overflow-auto max-sm:max-w-[200px]  max-sm:overflow-hidden">
+            <img src="/img/innovation.svg" alt="innovation" class="w-1/4 sm:w-1/8 md:w-1/5">
+            <img src="/img/sustainibilty.svg" alt="sustainibility" class="w-1/4 sm:w-1/8 md:w-1/5">
+            <img src="/img/excellence.svg" alt="excellence" class="w-1/4 sm:w-1/8 md:w-1/5">
+            <img src="/img/integrity.svg" alt="integrity" class="w-1/4 sm:w-1/8 md:w-1/5">
+        </div>
+    </section>
+    <!-- End hero Section: the image , the values -->
+
+
+    <!-- Start about section : heading, text, cards -->
+    <section class="about flex flex-col items-center gap-14 mt-20">
+        <h1 class="text-5xl font-bold text-[#0F67B1]">About Us</h1>
+        <p class="text-center w-[80%] p-2 text-xl">Nexio is more than an electronics company—we’re a vision for the future. Guided by innovation and sustainability, we create technology that empowers and inspires. Each Nexio product is crafted to enhance your life and shape a smarter, greener tomorrow.</p>
+        <div class="grid md:grid-cols-3 sm:grid-cols-1 ">
+            <img src="/img/clients.svg" alt="clients">
+            <img src="/img/partners.svg" alt="partners">
+            <img src="/img/worldwide.svg" alt="worldwide">
+        </div>
+    </section>
+    <!-- End about section : heading, text, cards -->
+
+
+    <!-- Start Our missions section : heading, text, cards -->
+    <section class="missions flex flex-col items-center mt-20 gap-4">
+        <div class="text-center flex flex-col gap-6 ">
+            <h1 class="text-5xl font-bold text-[#0F67B1]">Our Missions</h1>
+            <h3 class="font-bold p-4">Driven by Purpose, Guided by Innovation</h3>
+            <p class="text-center text-xl w-auto">Discover our mission to redefine technology with quality, sustainability, and customer focus at heart.</p>
+        </div>
+        <div class="grid md:grid-cols-2 sm:grid-cols-1  justify-between gap-4 ">
+            <div class="flex justify-center items-center">
+                <img class="w-1/2" src="/img/mission.svg" alt="excellent choice">
+            </div>
+            <div class="flex flex-col justify-center gap-2 w-[90%] pl-8">
+                <h3 class="text-l font-bold">1. Deliver Everyday Innovation</h3>
+                <p class="pl-6">To bring advanced, user-friendly technology into daily life.</p>
+                <h3 class="text-l font-bold">2. Build for Quality</h3>
+                <p class="pl-6">To uphold high standards in every product, ensuring lasting satisfaction.</p>
+                <h3 class="text-l font-bold">3. Promote Sustainability</h3>
+                <p class="pl-6">To integrate eco-friendly materials and processes in all we do.</p>
+            </div>
+        </div>
+    </section>
+                   
+    <section class="flex flex-col justify-center items-center gap-6 mt-20 mx-10">
+        <h1 class="text-5xl font-bold mb-10 text-[#0F67B1]">Our visions</h1>
+        <div class="visions grid grid-cols-1 md:grid-cols-4  text-center w-full gap-8  ">
+
+            <div class="bg-[#D9D9D9] flex flex-col  gap-4 items-center pb-8  hover:bg-[#0F67B1] hover:text-white">
+                <img class="w-full" src="/img/leader.svg" alt="leader in tech"> 
+                <div class="p-4 flex flex-col gap-4">
+                    <h3 class="font-bold">Lead in Technological Innovation</h3>
+                    <p>To become a global leader in electronics, delivering groundbreaking technology that shapes the future and inspires our customers worldwide.</p>
+                </div>
+            </div>
+            <div class="bg-[#D9D9D9] flex flex-col gap-4 items-center pb-8 hover:bg-[#0F67B1] hover:text-white">
+                <img class="w-full" src="/img/quality.svg" alt="leader in tech"> 
+                <div class="p-4 flex flex-col gap-4">
+                    <h3 class="font-bold">Set the Standard for Quality and Excellence</h3>
+                    <p>To establish Nexio as the benchmark for exceptional quality, reliability, and performance in every product category we enter.</p>
+                </div>
+            </div>
+            <div class="bg-[#D9D9D9]  flex flex-col gap-4 items-center pb-8 hover:bg-[#0F67B1] hover:text-white">
+                <img class="w-full" src="/img/customize.svg" alt="leader in tech"> 
+                <div class="p-4 flex flex-col gap-4">
+                    <h3 class="font-bold">Empower Personalized Experiences</h3>
+                    <p>To empower our customers by providing advanced, customizable solutions that fit their unique lifestyles, placing them at the heart of our innovations.</p>
+                </div>
+            </div>
+            <div class="bg-[#D9D9D9]  flex flex-col gap-4 items-center pb-8 hover:bg-[#0F67B1] hover:text-white">
+                <img class="w-full" src="/img/sustain.svg" alt="leader in tech"> 
+                <div class="p-4 flex flex-col gap-4">
+                    <h3 class="font-bold">Champion Sustainability in Electronics</h3>
+                    <p>To drive positive change in our industry by creating sustainable products and practices, setting a new standard for environmental responsibility in technology.</p>
+                </div>
+            </div>            
+        </div>
+    </section>
+    
+    <section class="Collabs mt-20 space-y-8 flex flex-col items-center" >
+        <h1 class="sm:text-5xl text-3xl font-bold text-center text-[#0F67B1]">Meet our collaborators</h1>
+        <p class="text-center p-6 text-xl  w-[80%]">At Nexio, our partnerships with top industry leaders drive us to deliver cutting-edge, high-quality technology. Together, we bring you products that redefine innovation and excellence. Meet the brands behind Nexio’s difference</p>
+        <div class="slider-container m-auto max-w-[463px] max-h-[463px] h-full w-full overflow-hidden">
+            <div id="slidemove" class="slider-images flex h-full relative right-0 transition-all duration-500">
+              <img src="/img/AMD.png" alt="Image 1">
+              <img src="/img/foxconn.png" alt="Image 2">
+              <img src="/img/intel.png" alt="Image 3">
+              <img src="/img/snapdragon.png" alt="Image 4">
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- FAQ DONE -->
+    <section class="faq flex flex-col gap-6 items-center mt-20 w-full justify-center">
+        <h1 class="text-5xl font-bold text-center text-[#0F67B1]">Frequently Asked Questions</h1>
+
+        <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-4 items-center w-[90%]">
+
+            <!-- Start Faq -->
+            <div class="flex flex-col gap-4">
+                <!-- Start Question 1 -->
+                <button type="button"   class=" bg-[#D9D9D9] shadow-lg p-4 rounded-xl">
+                    <div id="question1" class="flex gap-4 justify-start items-center justify-between">
+                        <span class=" text-black text-sm">How does Nexio ensure the quality and reliability of its services?</span>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </div>
+                    <div class=" hidden p-6" id="answer1">
+                        <p class="text-xs text-start text-[#565656]">Nexio ensures quality and reliability through secure technology, strict compliance, continuous monitoring, regular testing, and strong customer support.</p>
+                    </div>
+                </button> 
+
+                <!-- Start Question 2 -->
+                <button type="button"   class=" bg-[#D9D9D9] shadow-lg p-4 rounded-xl">
+                    <div id="question2" class="flex gap-4 justify-start items-center justify-between">
+                        <span class=" text-black text-sm">What makes Nexio different from other electronics brands?</span>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </div>
+                    <div class="hidden p-6" id="answer2">
+                        <p class="text-xs text-start text-[#565656]">Nexio ensures quality and reliability through secure technology, strict compliance, continuous monitoring, regular testing, and strong customer support.</p>
+                    </div>
+                </button> 
+                <!-- End Question 2 -->
+
+                <!-- Start Question 3 -->
+                <button type="button"   class=" bg-[#D9D9D9] shadow-lg p-4 rounded-xl">
+                    <div id="question3" class="flex gap-4 justify-start items-center justify-between">
+                        <span class=" text-black text-sm">Are Nexio products reliable and durable?</span>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </div>
+                    <div class=" hidden p-6" id="answer3">
+                        <p class="text-xs text-start text-[#565656]">Nexio ensures quality and reliability through secure technology, strict compliance, continuous monitoring, regular testing, and strong customer support.</p>
+                    </div>
+                </button> 
+                <!-- End Question 3 -->
+
+                <!-- Start Question 4 -->
+                <button type="button"   class=" bg-[#D9D9D9] shadow-lg p-4 rounded-xl">
+                    <div id="question4" class="flex gap-4 justify-start items-center justify-between">
+                        <span class=" text-black text-sm">Can I customize the specifications of my Nexio products?</span>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </div>
+                    <div class=" hidden p-6" id="answer4">
+                        <p class="text-xs text-start text-[#565656]">Nexio ensures quality and reliability through secure technology, strict compliance, continuous monitoring, regular testing, and strong customer support.</p>
+                    </div>
+                </button> 
+                <!-- End Question 4 -->
+
+                <!-- Start Question 5 -->
+                <button type="button"   class=" bg-[#D9D9D9] shadow-lg p-4 rounded-xl">
+                    <div id="question5" class="flex gap-4 justify-start items-center justify-between">
+                        <span class=" text-black text-sm">Does Nexio offer financing options or payment plans?</span>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </div>
+                    <div class=" hidden p-6" id="answer5">
+                        <p class="text-xs text-start text-[#565656]">Nexio ensures quality and reliability through secure technology, strict compliance, continuous monitoring, regular testing, and strong customer support.</p>
+                    </div>
+                </button>
+                <!-- End Question 5 -->
+
+            </div>
+            <!-- End Faq -->
+
+            <div class="flex flex-col gap-4 justify-center items-center py-8">
+                <img src="/img/FAQ.svg" alt="a character having questions">
+                <p class="p-3 bg-[#3FA2F6] text-white rounded-md text-center ">Can't find your question here?</p>
+                <p class="w-[350px] text-center">Get in touch with us, and we'll be happy to help answer all your questions!</p>
+                <button type="button" class="rounded-3xl bg-[#0F67B1] text-white p-2 px-4"><a href="/pages/contact.html">Contact Us</a></button>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ DONE -->
+
+    <!-- Orders //////////////////////////////////////////////////////////-->
+    <div id="OrderList" class="orders w-0 overflow-hidden max-w-[500px] h-[90vh] max-h-[600px] bg-mainColor absolute top-[75px] right-0  rounded-b-[20px] transition-all duration-500">
+
+        <div class="h-[15%] w-full border-b-2 border-white flex justify-center items-center text-white font-semibold text-2xl">
+            <h2>Your Orders</h2>
+        </div>
+
+        <div id="getOrdersSection" class="cardOrders w-full h-[65%] p-2 flex flex-col gap-2 overflow-y-auto translate-x-[100%] transition-all duration-500">
+
+
+            <div class="order w-full min-h-[100px]  bg-white rounded-[10px] flex  max-sm:min-h-[120px]">
+                <div class="w-[25%] h-full flex justify-center items-center p-2">
+                    <img src="../img/productOrder.svg" class="w-full h-full">
+                </div>
+                <div class="w-[55%] h-full flex flex-col justify-center ">
+                    <h2 class="text-2xl">Title</h2>
+                    <p class="text-[10px] max-sm:text-[8px]">description description description description description description description</p>
+                    <div class="flex items-center gap-5"><input type="number" class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="1"><h3 class="max-sm:hidden">Type RAM/PROCESSEUR</h3></div>
+                </div>
+                <div  class="w-[20%] h-full flex flex-col justify-end items-end p-2">
+                    <div class="w-full h-[90%] flex justify-end items-center pr-4"><i class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton" onclick="removeOrder(this)"></i></div>
+                    <h3 class="priceOrder text-[#5b5b5b]">250$</h3>
+                </div>
+            </div>
+
+            <div class="order w-full min-h-[100px]  bg-white rounded-[10px] flex  max-sm:min-h-[120px]">
+                <div class="w-[25%] h-full flex justify-center items-center p-2">
+                    <img src="../img/productOrder.svg" class="w-full h-full">
+                </div>
+                <div class="w-[55%] h-full flex flex-col justify-center ">
+                    <h2 class="text-2xl">Title</h2>
+                    <p class="text-[10px] max-sm:text-[8px]">description description description description description description description</p>
+                    <div class="flex items-center gap-5"><input type="number" class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="1"><h3 class="max-sm:hidden">Type RAM/PROCESSEUR</h3></div>
+                </div>
+                <div  class="w-[20%] h-full flex flex-col justify-end items-end p-2">
+                    <div class="w-full h-[90%] flex justify-end items-center pr-4"><i class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton" onclick="removeOrder(this)"></i></div>
+                    <h3 class="priceOrder text-[#5b5b5b]">250$</h3>
+                </div>
+            </div>
+
+            <div class="order w-full min-h-[100px]  bg-white rounded-[10px] flex  max-sm:min-h-[120px]">
+                <div class="w-[25%] h-full flex justify-center items-center p-2">
+                    <img src="../img/productOrder.svg" class="w-full h-full">
+                </div>
+                <div class="w-[55%] h-full flex flex-col justify-center ">
+                    <h2 class="text-2xl">Title</h2>
+                    <p class="text-[10px] max-sm:text-[8px]">description description description description description description description</p>
+                    <div class="flex items-center gap-5"><input type="number" class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="1"><h3 class="max-sm:hidden">Type RAM/PROCESSEUR</h3></div>
+                </div>
+                <div  class="w-[20%] h-full flex flex-col justify-end items-end p-2">
+                    <div class="w-full h-[90%] flex justify-end items-center pr-4"><i class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton" onclick="removeOrder(this)"></i></div>
+                    <h3 class="priceOrder text-[#5b5b5b]">250$</h3>
+                </div>
+            </div>
+
+            
+
+            
+
+        </div>
+
+        <div class="w-full h-[20%]">
+            <div class="w-full h-[30%] flex justify-end items-center pr-2"><h2 class="text-xl font-semibold">Totale: <span id="totaleElement" class="text-[#b1b1b1]"></span></h2></div>
+            <div class="w-full h-[70%] flex justify-center items-center">
+                <a href="#" class="h-[55px] w-[50%] bg-white flex justify-center items-center text-mainColor font-semibold text-xl rounded-[20px] hover:bg-[#e2e2e2]">checkout</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- Orders //////////////////////////////////////////////////////////-->
+
+    <footer class="w-full min-h-[400px] bg-[#134B70] grid grid-cols-[30%_30%_40%] grid-rows-[80% 20%] justify-center max-lg:grid-cols-[50%_50%] max-lg:grid-rows-[auto_auto_60px] max-lg:gap-y-5">
+
+        <div class="flex flex-col pt-10 pl-20 max-sm:pl-5">
+            <h3 class="text-white font-bold text-xl mb-5">Company</h3>
+            <ul class="flex flex-col gap-3 text-[#D4D4D4] font-medium">
+                <li>Home</li>
+                <li>Catalogue</li>
+                <li>A propos</li>
+            </ul>
+        </div>
+
+        <div class="flex flex-col pt-10">
+            <h3 class="text-white font-bold text-xl mb-5">Payer avec</h3>
+            <div class="grid grid-cols-3 w-1/2 payMethod gap-4 max-sm:justify-center max-sm:flex-wrap max-sm:w-[90%]">
+                <img src="../img/bank/paypal.svg" alt="Paypal">
+                <img src="../img/bank/apple-pay.svg" alt="apple">
+                <img src="../img/bank/mastercard.svg" alt="mastercard">
+                <img src="../img/bank/visa.svg" alt="visa">
+                <img src="../img/bank/bitcoin.svg" alt="bitcoin">
+                <img src="../img/bank/payu.svg" alt="payu">
+            </div>
+        </div>
+
+
+        <div class="flex flex-col pt-10 gap-y-5 max-lg:col-span-full max-lg:pl-20 max-sm:pl-5">
+            <h3 class="text-white font-bold text-xl">Company</h3>
+            <p class="w-[70%] text-[#D4D4D4]">
+                Lorem ipsum sit amet, consectateur adispicing elit. Fusce euismod concallis velit, eu auctor lacus vehicula sit amet.
+            </p>
+            <div class="flex gap-3 max-sm:w-full max-sm:justify-center max-sm:pl-[-1.25rem]">
+
+                <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-facebook-f text-white text-3xl"></i></div></a>
+
+                <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-twitter text-white text-3xl"></i></div></a>
+
+                <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-linkedin text-white text-3xl"></i></div></a>
+
+                <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-github text-white text-3xl"></i></div></a>
+
+            </div>
+        </div>
+
+        <div class="col-span-full flex justify-center items-center">
+            <h6 class="text-white text-center">© 2024 Codebenders. All rights reserved</h6>
+        </div>
+
+    </footer>   
     
 
     <script src="../js/script.js"></script>
     <script src="../js/about.js"></script>
+    
 </body>
 </html>
