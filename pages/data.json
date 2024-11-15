@@ -17,6 +17,40 @@
     "screenSize": "15.6 inches"
   },
   {
+      "name": "iBUYPOWER Y60",
+      "price": "$1500",
+      "description": "Black Gaming PC Computer Desktop",
+      "image": ["https://m.media-amazon.com/images/I/81vkfy7DneL._AC_SL1500_.jpg", "https://m.media-amazon.com/images/I/811+LOii47L._AC_SL1500_.jpg", "https://m.media-amazon.com/images/I/81m-RuoTQtL._AC_SL1500_.jpg", "https://m.media-amazon.com/images/I/71ZaZ8-5PAL._AC_SL1200_.jpg", "https://m.media-amazon.com/images/I/61qd7EDG51L._AC_SL1200_.jpg", "https://m.media-amazon.com/images/I/61r6CdibI4L._AC_SL1200_.jpg"],
+      "category": "Computers & Laptops",
+      "Supplier": "LUZ1500",
+      "Brand": "iBUYPOWER",
+      "HardDiscCapacity": "1TB SSD",
+      "Design": "Black",
+      "operatingSystem": "Windows 11 Home",
+      "Ratings": "4.9/5",
+      "RAM": "32GB",
+      "Processor": "AMD Ryzen 9 7900X CPU",
+      "GraphicsCard": "NVIDIA GeForce RTX 4070",
+      "screenSize": "Non"
+    },
+  {
+    "name": "LG gram Superslim",
+    "price": "$1230",
+    "description": "15.6-inch Ultra Thin and Lightweight Laptop",
+    "image": ["https://m.media-amazon.com/images/I/81K1-CVQFsL._AC_SL1500_.jpg", "https://m.media-amazon.com/images/I/51R1mAf-kLL._AC_SL1500_.jpg", "https://m.media-amazon.com/images/I/71Qf1SQer-L._AC_SL1500_.jpg", "https://m.media-amazon.com/images/I/71qDv17Rx3L._AC_SL1500_.jpg", "https://m.media-amazon.com/images/I/81Cz+AmT5VL._AC_SL1500_.jpg"],
+    "category": "Chargers & Power Banks",
+    "Supplier": "PC10000",
+    "Brand": "LG",
+    "HardDiscCapacity": "1TB",
+    "Design": "Compact, durable",
+    "operatingSystem": "WINDOWS 11",
+    "Ratings": "4.3/5",
+    "RAM": "16GB",
+    "Processor": "Intel Core i7",
+    "GraphicsCard": "Core Ultra 7 155H",
+    "screenSize": "15.6 inches"
+  },
+  {
     "name": "Ultra Monitor",
     "price": "$300",
     "description": "27-inch 4K Display",
@@ -118,28 +152,12 @@
     "GraphicsCard": "Integrated",
     "screenSize": "10.5 inches"
   },
-  {
-    "name": "Portable Charger",
-    "price": "$30",
-    "description": "10,000mAh capacity",
-    "image": "https://images.pexels.com/photos/14438774/pexels-photo-14438774.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "category": "Chargers & Power Banks",
-    "Supplier": "PC10000",
-    "Brand": "ChargeFast",
-    "HardDiscCapacity": "None",
-    "Design": "Compact, durable",
-    "operatingSystem": "None",
-    "Ratings": "4.3/5",
-    "RAM": "None",
-    "Processor": "None",
-    "GraphicsCard": "None",
-    "screenSize": "None"
-  },
+
   {
     "name": "Smartwatch Plus",
     "price": "$250",
     "description": "Fitness tracking",
-    "image": "https://i.pinimg.com/474x/4e/5c/fc/4e5cfcbe4be71fef61fc5930efa21704.jpg",
+    "image": ["https://m.media-amazon.com/images/I/61dZOvX8ELL._AC_SL1500_.jpg", "https://m.media-amazon.com/images/I/81EXs0ZbfIL._AC_SL1500_.jpg", "https://m.media-amazon.com/images/I/71PShPABUkL._AC_SL1500_.jpg", "https://m.media-amazon.com/images/I/81K2XU6ZSRL._AC_SL1500_.jpg", "https://m.media-amazon.com/images/I/81JEDM23KkL._AC_SL1500_.jpg"],
     "category": "Wearable Tech",
     "Supplier": "SWP250",
     "Brand": "TimePro",
@@ -221,23 +239,7 @@
       "GraphicsCard": "Mali-G52",
       "screenSize": "6.1 inches"
     },
-    {
-      "name": "Laptop Ultra Z",
-      "price": "$1500",
-      "description": "32GB RAM, 1TB SSD",
-      "image": "https://i.pinimg.com/236x/9e/d2/b5/9ed2b50726d35b0af71bfc66ca49b183.jpg",
-      "category": "Computers & Laptops",
-      "Supplier": "LUZ1500",
-      "Brand": "UltraTech",
-      "HardDiscCapacity": "1TB SSD",
-      "Design": "Ultra-slim, metallic",
-      "operatingSystem": "Windows 11 Pro",
-      "Ratings": "4.9/5",
-      "RAM": "32GB",
-      "Processor": "Intel Core i9",
-      "GraphicsCard": "NVIDIA RTX 3060",
-      "screenSize": "17 inches"
-    },
+    
     {
       "name": "HD Webcam",
       "price": "$80",

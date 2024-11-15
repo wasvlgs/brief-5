@@ -167,117 +167,291 @@
 
         <div class="flex flex-col justify-between">
           <div>
-            <h1 id="product-title" class="font-bold text-2xl lg:text-5xl my-4">
-            </h1>
+            <h1
+              id="product-title"
+              class="font-bold text-2xl lg:text-5xl my-4"
+            ></h1>
             <h3
               id="product-description"
               class="font-semibold text-md lg:text-2xl my-4 lg:my-8"
-            >
-            </h3>
+            ></h3>
             <h4 id="product-price" class="text-xl lg:text-3xl my-4 lg:my-2">
               $00.00
             </h4>
           </div>
 
           <div
-            class="grid grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-x-14 mt-6 lg:mt-0">
-            <div class="text-white lg:w-[80%] bg-blue-500 hover:bg-[#134B70] flex justify-around items-center shadow-2xl font-medium rounded-[1.5rem] text-md lg:text-3xl px-4 lg:px-2 py-3 lg:py-3">
-                <button id="minus" class="mr-4 lg:mr-8 lg:text-4xl">-</button>
-                <span id="productNumber" class="flex justify-center">1</span>
-                <button id="plus" class="ml-4 lg:ml-8 lg:text-4xl">+</button>
+            class="grid grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-x-14 mt-6 lg:mt-0"
+          >
+            <div
+              class="text-white lg:w-[80%] bg-blue-500 hover:bg-[#134B70] flex justify-around items-center shadow-2xl font-medium rounded-[1.5rem] text-md lg:text-3xl px-4 lg:px-2 py-3 lg:py-3"
+            >
+              <button id="minus" class="mr-4 lg:mr-8 lg:text-4xl">-</button>
+              <span id="productNumber" class="flex justify-center">1</span>
+              <button id="plus" class="ml-4 lg:ml-8 lg:text-4xl">+</button>
             </div>
             <button
-              class="text-white lg:w-[80%] bg-blue-500 hover:bg-[#134B70] shadow-2xl font-bold rounded-[1.5rem] text-[0.7rem] lg:text-2xl px-4 lg:px-2 py-3 lg:py-3 lg:ml-8">
+              class="text-white lg:w-[80%] bg-blue-500 hover:bg-[#134B70] shadow-2xl font-bold rounded-[1.5rem] text-[0.7rem] lg:text-2xl px-4 lg:px-2 py-3 lg:py-3 lg:ml-8"
+            >
               Add to cart
             </button>
             <button
               id="customizeBtn"
-              class="text-white lg:w-[80%] bg-blue-500 hover:bg-[#134B70] shadow-2xl font-bold rounded-[1.5rem] text-[0.75rem] lg:text-2xl px-4 lg:px-2 py-3 lg:py-3 lg:ml-12">
+              class="text-white lg:w-[80%] bg-blue-500 hover:bg-[#134B70] shadow-2xl font-bold rounded-[1.5rem] text-[0.75rem] lg:text-2xl px-4 lg:px-2 py-3 lg:py-3 lg:ml-12"
+            >
               Customize
             </button>
+            <!-- pc modal -->
             <div
-            id="addModal"
-            class="hidden fixed inset-0 z-50 flex justify-center items-center">
-            <div class="absolute inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm"></div>
-            
-            <div class="relative p-4 w-full max-w-md max-h-full z-10">
-                <!-- Modal content -->
-                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                    <!-- Modal header -->
-                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                            Customize Your Product
-                        </h3>
-                        <button
-                            id="closeModal"
-                            class="text-gray-600 hover:text-black"
-                            aria-label="Close task creation modal">
-                            ✕
-                        </button>
+              id="pcModal"
+              class="hidden fixed inset-0 z-50 flex justify-center items-center"
+            >
+              <div
+                class="absolute inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm"
+              ></div>
+
+              <div class="relative p-4 w-full max-w-md max-h-full z-10">
+                <div
+                  class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                >
+                  <div
+                    class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+                  >
+                    <h3
+                      class="text-lg font-semibold text-gray-900 dark:text-white"
+                    >
+                      Customize Your Product
+                    </h3>
+                    <button
+                      id="closeModal"
+                      class="text-gray-600 hover:text-black"
+                      aria-label="Close task creation modal"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                  <form class="p-4 md:p-5">
+                    <div class="grid gap-4 mb-4 grid-cols-1">
+                      <div class="col-span-2 sm:col-span-1">
+                        <label
+                          for="category"
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          Hadr Disk
+                        </label>
+                        <select
+                          id="category"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                        >
+                          <option disabled selected="">Choose option</option>
+                          <option value="h1">250 GB</option>
+                          <option value="h2">500 GB</option>
+                          <option value="h3">1 TB</option>
+                        </select>
+                      </div>
+                      <div class="col-span-2 sm:col-span-1">
+                        <label
+                          for="category"
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          Graphic Card
+                        </label>
+                        <select
+                          id="category"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                        >
+                          <option disabled selected="">Choose option</option>
+                          <option value="g1">RTX 4090</option>
+                          <option value="g2">Nvidia GeForce RTX 4060</option>
+                          <option value="g3">AMD Ryzen 7 5800X3D</option>
+                          <option value="g4">AMD Ryzen 5 7600X</option>
+                        </select>
+                      </div>
+                      <div class="col-span-2 sm:col-span-1">
+                        <label
+                          for="category"
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          RAM
+                        </label>
+                        <select
+                          id="category"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                        >
+                          <option disabled selected="">Choose option</option>
+                          <option value="r1">8 GB</option>
+                          <option value="r2">16 GB</option>
+                          <option value="r3">32 GB</option>
+                        </select>
+                      </div>
                     </div>
-                    <!-- Modal body -->
-                    <form class="p-4 md:p-5">
-                        <div class="grid gap-4 mb-4 grid-cols-1">
-                            <div class="col-span-2 sm:col-span-1">
-                                <label
-                                    for="category"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                    Hadr Disk
-                                </label>
-                                <select
-                                    id="category"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                    <option disabled selected="">Choose option</option>
-                                    <option value="TV">250 GB</option>
-                                    <option value="PC">500 GB</option>
-                                    <option value="GA">1 TB</option>
-                                </select>
-                            </div>
-                            <div class="col-span-2 sm:col-span-1">
-                                <label
-                                    for="category"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                    Graphic Card
-                                </label>
-                                <select
-                                    id="category"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                    <option disabled selected="">Choose option</option>
-                                    <option value="TV"> RTX 4090</option>
-                                    <option value="PC">Nvidia GeForce RTX 4060</option>
-                                    <option value="GA">AMD Ryzen 7 5800X3D</option>
-                                    <option value="PH">AMD Ryzen 5 7600X</option>
-                                </select>
-                            </div>
-                            <div class="col-span-2 sm:col-span-1">
-                              <label
-                                  for="category"
-                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                  RAM
-                              </label>
-                              <select
-                                  id="category"
-                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                  <option disabled selected="">Choose option</option>
-                                  <option value="TV">8 GB</option>
-                                  <option value="PC">16 GB</option>
-                                  <option value="GA">32 GB</option>
-                              </select>
-                          </div>
-                        </div>
-                        <button
-                            type="submit"
-                            class="text-white inline-flex items-center bg-blue-500 hover:bg-[#134B70] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                            Confirm
-                        </button>
-                    </form>
+                    <button
+                      type="submit"
+                      class="text-white inline-flex items-center bg-blue-500 hover:bg-[#134B70] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                    >
+                      Confirm
+                    </button>
+                  </form>
                 </div>
+              </div>
             </div>
-        </div>
+            <!-- phone modal -->
+            <div
+              id="phoneModal"
+              class="hidden fixed inset-0 z-50 flex justify-center items-center"
+            >
+              <div
+                class="absolute inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm"
+              ></div>
+
+              <div class="relative p-4 w-full max-w-md max-h-full z-10">
+                <div
+                  class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                >
+                  <div
+                    class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+                  >
+                    <h3
+                      class="text-lg font-semibold text-gray-900 dark:text-white"
+                    >
+                      Customize Your Product
+                    </h3>
+                    <button
+                      id="closeModal"
+                      class="text-gray-600 hover:text-black"
+                      aria-label="Close task creation modal"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                  <form class="p-4 md:p-5">
+                    <div class="grid gap-4 mb-4 grid-cols-1">
+                      <div class="col-span-2 sm:col-span-1">
+                        <label
+                          for="category"
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          Storage
+                        </label>
+                        <select
+                          id="category"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                        >
+                          <option disabled selected="">Choose option</option>
+                          <option value="256">256 GB</option>
+                          <option value="512">512 GB</option>
+                          <option value="1">1 TB</option>
+                        </select>
+                      </div>
+                      <div class="col-span-2 sm:col-span-1">
+                        <label
+                          for="category"
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          Processeur
+                        </label>
+                        <select
+                          id="category"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                        >
+                          <option disabled selected="">Choose option</option>
+                          <option value="p1">Exynos</option>
+                          <option value="p2">Snapdragon</option>
+                        </select>
+                      </div>
+                      <div class="col-span-2 sm:col-span-1">
+                        <label
+                          for="category"
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          RAM
+                        </label>
+                        <select
+                          id="category"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                        >
+                          <option disabled selected="">Choose option</option>
+                          <option value="r1">8 GB</option>
+                          <option value="r2">16 GB</option>
+                          <option value="r3">32 GB</option>
+                        </select>
+                      </div>
+                    </div>
+                    <button
+                      type="submit"
+                      class="text-white inline-flex items-center bg-blue-500 hover:bg-[#134B70] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                    >
+                      Confirm
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- other items modal -->
+            <div
+              id="itemsModal"
+              class="hidden fixed inset-0 z-50 flex justify-center items-center"
+            >
+              <div
+                class="absolute inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm"
+              ></div>
+
+              <div class="relative p-4 w-full max-w-md max-h-full z-10">
+                <div
+                  class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                >
+                  <div
+                    class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+                  >
+                    <h3
+                      class="text-lg font-semibold text-gray-900 dark:text-white"
+                    >
+                      Customize Your Product
+                    </h3>
+                    <button
+                      id="closeModal"
+                      class="text-gray-600 hover:text-black"
+                      aria-label="Close task creation modal"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                  <form class="p-4 md:p-5">
+                    <div class="grid gap-4 mb-4 grid-cols-1">
+                      <div class="col-span-2 sm:col-span-1">
+                        <label
+                          for="category"
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          Color
+                        </label>
+                        <select
+                          id="category"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                        >
+                          <option disabled selected="">Choose option</option>
+                          <option value="gray">Space Gray</option>
+                          <option value="silver">Silver</option>
+                          <option value="white">White</option>
+                        </select>
+                      </div>
+                    </div>
+                    <button
+                      type="submit"
+                      class="text-white inline-flex items-center bg-blue-500 hover:bg-[#134B70] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                    >
+                      Confirm
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
 
+          <!-- HR -->
           <div class="border-solid bg-stone-500 h-0.5 mt-8 lg:my-4"></div>
 
+          <!-- Advantages -->
           <div
             class="rounded-xl lg:rounded-3xl shadow-2xl flex flex-col justify-around bg-[#134B70] mt-8 lg:mt-0 mb-6 p-2 lg:p-4 text-white"
           >
@@ -306,6 +480,7 @@
         </div>
       </div>
 
+      <!-- Features -->
       <div
         class="lg:p-4 p-6 lg:rounded-3xl grid grid-cols-1 gap-6 lg:gap-8 bg-[#134B70] rounded-xl text-white"
       >

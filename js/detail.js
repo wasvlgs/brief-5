@@ -1,13 +1,15 @@
 // cutomize button
 let openCustomize = document.getElementById("customizeBtn");
 let closeModal = document.getElementById("closeModal");
-let addModal = document.getElementById("addModal");
+let pcModal = document.getElementById("pcModal");
+let phoneModal = document.getElementById("phoneModal");
+let itemsModal = document.getElementById("itemsModal");
 
 openCustomize.onclick = function(){
-  addModal.classList.remove("hidden");
+  pcModal.classList.remove("hidden");
 };
 closeModal.onclick = function(){
-  addModal.classList.add("hidden");
+  pcModal.classList.add("hidden");
 };
 
 let productNumber = document.getElementById("productNumber");
@@ -18,21 +20,24 @@ let totalPrice = 0;
 const minProduct = 1;
 const maxProduct = 10;
 
-function getPrice() {
-  const priceProduct = document.getElementById("product-price");
-  if (priceProduct) {
-      return parseFloat(priceProduct.textContent.replace('$', ''));
-  }
-  return 0;
-}
+// function getPrice() {
+//   const priceProduct = document.getElementById("product-price");
+//   if (priceProduct) {
+//       return parseFloat(priceProduct.textContent.replace('$', ''));
+//   }
+//   return 0;
+// }
 
 function updateCounter() {
 
-  productNumber.textContent = productCounter;
-
-  const basePrice = getPrice();
-  totalPrice = basePrice * productCounter;
   const priceElement = document.getElementById("product-price");
+  productNumber.textContent = productCounter;
+  // const basePrice = getPrice();
+
+const price = 1000;
+priceElement.textContent = price;
+
+  totalPrice = price * productCounter;
   if (priceElement) {
     priceElement.textContent = `$${totalPrice.toFixed(2)}`;
   }
@@ -64,11 +69,11 @@ if (minusProduct) {
       }
 });
 }
-
+updateCounter();
 fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            let getCard = data[2];
+            let getCard = data[7];
 
 
   document.getElementById("product-title").textContent = getCard.name;
@@ -131,5 +136,4 @@ thumbnails.forEach((thumbnail, index) => {
 
 thumbnails[0].classList.add("thumbnail-active");
 
-updateCounter();
 
