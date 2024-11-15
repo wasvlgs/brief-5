@@ -253,3 +253,12 @@ function afficherPanies(){
 
 
 }
+
+
+
+// ======================== detail product ===================
+
+
+function toDetailProduct(){
+    
+}
