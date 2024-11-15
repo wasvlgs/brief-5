@@ -43,10 +43,10 @@
 
 
                 <ul id="listNavbar" class="w-full h-full flex items-center justify-center gap-20 text-black font-medium max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor  max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400">
-                    <li><a class="hover:text-mainColor" href="#">Home</a></li>
-                    <li><a class="hover:text-mainColor" href="#">Cataloge</a></li>
-                    <li><a class="hover:text-mainColor" href="#">About</a></li>
-                    <li><a class="hover:text-mainColor" href="#">Contact</a></li>
+                    <li><a class="hover:text-mainColor" href="../index.html">Home</a></li>
+                    <li><a class="hover:text-mainColor" href="catalogue.html">Cataloge</a></li>
+                    <li><a class="hover:text-mainColor" href="about.html">About</a></li>
+                    <li><a class="hover:text-mainColor" href="contact.html">Contact</a></li>
                 </ul>
 
 
@@ -107,7 +107,22 @@
         <div id="getOrdersSection" class="cardOrders w-full h-[65%] p-2 flex flex-col gap-2 overflow-y-auto translate-x-[100%] transition-all duration-500">
 
 
-            <div class="order w-full min-h-[100px]  bg-white rounded-[10px] flex  max-sm:min-h-[120px]">
+             <div class="order w-full min-h-[100px]  bg-white rounded-[10px] flex  max-sm:min-h-[120px]">
+                <div class="w-[25%] h-full flex justify-center items-center p-2">
+                    <img src="../img/productOrder.svg" class="w-full h-full">
+                </div>
+                <div class="w-[55%] h-full flex flex-col justify-center ">
+                    <h2 class="text-2xl">Title</h2>
+                    <p class="text-[10px] max-sm:text-[8px]">description description description description description description description</p>
+                    <div class="flex items-center gap-5"><input type="number" class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="1"><h3 class="max-sm:hidden">Type RAM/PROCESSEUR</h3></div>
+                </div>
+                <div  class="w-[20%] h-full flex flex-col justify-end items-end p-2">
+                    <div class="w-full h-[90%] flex justify-end items-center pr-4"><i class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton" onclick="removeOrder(this)"></i></div>
+                    <h3 class="priceOrder text-[#5b5b5b]">250$</h3>
+                </div>
+            </div>
+
+            <!--<div class="order w-full min-h-[100px]  bg-white rounded-[10px] flex  max-sm:min-h-[120px]">
                 <div class="w-[25%] h-full flex justify-center items-center p-2">
                     <img src="../img/productOrder.svg" class="w-full h-full">
                 </div>
@@ -135,22 +150,7 @@
                     <div class="w-full h-[90%] flex justify-end items-center pr-4"><i class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton" onclick="removeOrder(this)"></i></div>
                     <h3 class="priceOrder text-[#5b5b5b]">250$</h3>
                 </div>
-            </div>
-
-            <div class="order w-full min-h-[100px]  bg-white rounded-[10px] flex  max-sm:min-h-[120px]">
-                <div class="w-[25%] h-full flex justify-center items-center p-2">
-                    <img src="../img/productOrder.svg" class="w-full h-full">
-                </div>
-                <div class="w-[55%] h-full flex flex-col justify-center ">
-                    <h2 class="text-2xl">Title</h2>
-                    <p class="text-[10px] max-sm:text-[8px]">description description description description description description description</p>
-                    <div class="flex items-center gap-5"><input type="number" class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="1"><h3 class="max-sm:hidden">Type RAM/PROCESSEUR</h3></div>
-                </div>
-                <div  class="w-[20%] h-full flex flex-col justify-end items-end p-2">
-                    <div class="w-full h-[90%] flex justify-end items-center pr-4"><i class="fa-solid fa-trash text-xl text-[red] cursor-pointer getRemoveButton" onclick="removeOrder(this)"></i></div>
-                    <h3 class="priceOrder text-[#5b5b5b]">250$</h3>
-                </div>
-            </div>
+            </div> -->
 
             
 
