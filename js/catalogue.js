@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    searchFunction();
     const productContainer = document.getElementById("productContainer");
     const pageIndicator = document.createElement("div");
     pageIndicator.id = "pageIndicator";
@@ -122,19 +123,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const pageProducts = filteredProducts.slice(start, end);
 
-        pageProducts.forEach((product,index) => {
+        pageProducts.forEach((product) => {
             const productCard = document.createElement("div");
-            productCard.className = "w-[146px] h-[174px] lg:w-[400px] lg:h-[409px] bg-[#E6E6E6] rounded-lg shadow-lg lg:p-4 pt-2 flex flex-col items-center text-center";
+            productCard.className = "cardItem w-[146px] h-[174px] lg:w-[400px] lg:h-[409px] bg-[#E6E6E6] rounded-lg shadow-lg lg:p-4 pt-2 flex flex-col items-center text-center";
 
             productCard.innerHTML = `    
                     <button id="details-button">
                         <a href="detail.html"><img onclick="toDetailProduct(${product.id})" src="${product.image[0]}" alt="${product.name}" class="px-4 object-fill w-screen h-[10vh] mb-4 rounded-[30px] lg:w-screen lg:px-10 lg:h-[35vh]"></a> 
                     </button>
-                    <h3 class="text-[12px] lg:text-lg font-bold mb-2">${product.name}</h3>
+                    <h3 class="titleProduct text-[12px] lg:text-lg font-bold mb-2">${product.name}</h3>
                     <p class="text-gray-600 lg:mb-2 text-[12px] lg:text-lg">${product.description}</p>
                     <div class="flex items-center justify-around w-full">
                         <span class="text-[#FF0000] font-semibold lg:text-lg text-[12px]">${product.price}</span>
-                        <img  onclick="addCardToPanier(${product.id},${index})" data-id="${product.id}" class="lg:w-10 lg:h-14 h-[43px] w-[23px] ml-4 cursor-pointer add-to-cart" src="../img/AddShoppingCart.png" alt="Add to cart">
+                        <img  onclick="addCardToPanier(${product.id})" data-id="${product.id}" class="lg:w-10 lg:h-14 h-[43px] w-[23px] ml-4 cursor-pointer add-to-cart" src="../img/AddShoppingCart.png" alt="Add to cart">
                     </div>
                 `;
 
@@ -184,3 +185,25 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
 });
+
+
+
+
+// =============================== search ============================
+
+
+function searchFunction(){
+    let getInputSearch = document.getElementById("getInputSearch");
+
+    getInputSearch.onkeyup = ()=>{
+        let getCards = document.getElementsByClassName("cardItem");
+        for(let i = 0; i < getCards.length; i++){
+            let getTitle = getCards[i].getElementsByClassName("titleProduct")[0].innerHTML;
+            if(getTitle.toUpperCase().indexOf(getInputSearch.value.toUpperCase()) >= 0){
+                getCards[i].style.display = "flex";
+            }else{
+                getCards[i].style.display = "none";
+            }
+        }
+    }
+}

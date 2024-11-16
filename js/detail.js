@@ -16,40 +16,9 @@ const minProduct = 1;
 const maxProduct = 10;
 productNumber.innerText = productCounter;
 
-// function getPrice() {
-//   const priceProduct = document.getElementById("product-price");
-//   if (priceProduct) {
-//       return parseFloat(priceProduct.textContent.replace('$', ''));
-//   }
-//   return 0;
-// }
-
-// function updateCounter() {
-
-//   const priceElement = document.getElementById("product-price");
-//   productNumber.textContent = productCounter;
-//   // const basePrice = getPrice();
-
-// const price = 1000;
-// priceElement.textContent = price;
-
-//   totalPrice = price * productCounter;
-//   if (priceElement) {
-//     priceElement.textContent = `$${totalPrice.toFixed(2)}`;
-//   }
-
-//   if (minusProduct){
-//     minusProduct.disabled = productCounter <= minProduct;
-//   }
-
-//   if (plusProduct){
-//     plusProduct.disabled = productCounter >= maxProduct;
-//   }
-
-// }
 
 let special = document.getElementsByClassName("special")[0];
-let getIndexItem;
+
 let getpriceTotale;
 
 
@@ -105,7 +74,7 @@ async function displayInfo() {
       data[getIndex].OperatingSystem;
     document.getElementById("rating").textContent = data[getIndex].Ratings;
     special.id = data[getIndex].id;
-    getIndexItem = getIndex;
+
 
     openCustomize.onclick = function () {
       if (
@@ -275,7 +244,7 @@ displayInfo();
 function addTo() {
   let getId = special.id;
 
-  addCardToPanier(getId, getIndexItem,productCounter,getpriceTotale);
+  addCardToPanier(getId,productCounter,getpriceTotale);
 }
 
 // slide

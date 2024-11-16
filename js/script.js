@@ -111,6 +111,8 @@ function getCountOrder(){
         allInputsCount.onchange = ()=>{
             if(allInputsCount.value < 1){
                 allInputsCount.value = 1;
+            }else if(allInputsCount.value > 10){
+                allInputsCount.value = 10;
             }else{
                 let getParent = allInputsCount.parentElement.parentElement.parentElement;
                 for(let i = 0; i < panierCards.length; i++){
@@ -170,19 +172,30 @@ function removeOrder(element){
 
 
 
-async function addCardToPanier(getId,index,count,price) {
+async function addCardToPanier(getId,count,price) {
     try {
+
+        let index;
+        
 
         const response = await fetch('data.json');
         const data = await response.json();
 
+        for(let i = 0; i < data.length; i++){
+            if(data[i].id == getId){
+                index = i;
+            }
+        }
+
+        var testCount = true;
         if(!count){
             count = 1;
+            testCount = false;
         }
         if(!price){
             price = data[index].price;
         }
-        if (data[getId]) {
+        if (getId) {
         let cards = document.getElementsByClassName("order");
         var getAnswer = true;
 
@@ -190,11 +203,13 @@ async function addCardToPanier(getId,index,count,price) {
             if(cards[i].id == getId){
                 getAnswer = false;
                 let getValue = cards[i].getElementsByClassName("getInputsCount")[0];
-                if(!count){
-                    getValue.value = parseInt(getValue.value) + 1;
+                if(testCount === false){
+                getValue.value = parseInt(getValue.value) + 1;
                 }else{
                     getValue.value = count;
                 }
+
+
                 for(i = 0; i < panierCards.length; i++){
                     if(panierCards[i].id == getId){
                         panierCards[i].price = price;

@@ -5,6 +5,10 @@ if(JSON.parse(localStorage.getItem("paniesData"))){
     panierCards = JSON.parse(localStorage.getItem("paniesData"));
 }
 
+if(panierCards.length <= 0){
+    location.replace("catalogue.html")
+}
+
 let getAllTotale = 0;
 
 function afficheTotale(){
@@ -36,7 +40,7 @@ afficheAllPayement();
 function afficheAllPayement(){
     let prixTotale = document.getElementById("Prix");
     let TVA = document.getElementById("TVA");
-    let setTVA = Math.floor(getAllTotale/6);
+    let setTVA = Math.floor(getAllTotale*20/100);
     let setShipping = 45;
     let Shipping = document.getElementById("Shipping");
     let TotalTTC = document.getElementById("TotalTTC");
@@ -98,10 +102,15 @@ document.getElementById('Imprimer').addEventListener('click', function() {
 
 function ouvrirModal() {
     document.getElementById("confirmationModal").style.display = "flex";
+    panierCards = [];
+    localStorage.removeItem("id");
+    updateStorage();
+
 }
 
 function fermerModal() {
     document.getElementById("confirmationModal").style.display = "none";
+    location.replace("catalogue.html")
 }
 const closeBtn = document.getElementsByClassName("close")[0];
 closeBtn.onclick = function() {
