@@ -199,6 +199,12 @@ function searchFunction(){
         let getCards = document.getElementsByClassName("cardItem");
         for(let i = 0; i < getCards.length; i++){
             let getTitle = getCards[i].getElementsByClassName("titleProduct")[0].innerHTML;
+            let carouselContent = document.getElementById("carouselContent");
+            if(getInputSearch.value == ""){
+                carouselContent.style.display = "block";
+            }else{
+            carouselContent.style.display = "none";
+            }
             if(getTitle.toUpperCase().indexOf(getInputSearch.value.toUpperCase()) >= 0){
                 getCards[i].style.display = "flex";
             }else{

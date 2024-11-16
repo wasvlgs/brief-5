@@ -120,7 +120,7 @@ async function displayInfo() {
       let getTotale = getPrice + value1 + value2 + value3;
 
       priceProduct.innerText = "$" + getTotale;
-      getpriceTotale = getTotale+"$";
+      getpriceTotale = "$"+getTotale;
     }
 
     function changeSelectPc() {
