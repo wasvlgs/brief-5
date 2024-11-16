@@ -98,7 +98,7 @@ function ordersCalcule(){
         count = parseInt(getInputsCount.value);
         totale += getPrice*count;
     }
-    totaleElement.innerText = totale + "$";
+    totaleElement.innerText = "$"+totale;
 }
 
 // ========================= Calcule l'orders =============================
@@ -121,6 +121,9 @@ function getCountOrder(){
                 let count = allInputsCount.value;
                 ordersCalcule(count);
     updateStorage();
+
+    
+            
 
             }
         }
@@ -148,9 +151,13 @@ function removeOrder(element){
         }
     }
     element.parentElement.parentElement.parentElement.remove();
+
     updateStorage();
             ordersCalcule();
             updateCounter();
+    
+            
+            
 }
 
 
@@ -169,7 +176,12 @@ async function addCardToPanier(getId,index,count,price) {
         const response = await fetch('data.json');
         const data = await response.json();
 
-
+        if(!count){
+            count = 1;
+        }
+        if(!price){
+            price = data[index].price;
+        }
         if (data[getId]) {
         let cards = document.getElementsByClassName("order");
         var getAnswer = true;
@@ -178,28 +190,31 @@ async function addCardToPanier(getId,index,count,price) {
             if(cards[i].id == getId){
                 getAnswer = false;
                 let getValue = cards[i].getElementsByClassName("getInputsCount")[0];
-                getValue.value = parseInt(getValue.value) + 1;
+                if(!count){
+                    getValue.value = parseInt(getValue.value) + 1;
+                }else{
+                    getValue.value = count;
+                }
                 for(i = 0; i < panierCards.length; i++){
                     if(panierCards[i].id == getId){
+                        panierCards[i].price = price;
                         panierCards[i].count = getValue.value;
                     }
                 }
+                afficherPanies();
                 updateStorage();
                 updateCounter();
-         getCountOrder();
-         ordersCalcule();
+                getCountOrder();
+                ordersCalcule();
+                
+                
 
 
             }
         }
 
 
-        if(!count){
-            count = 1;
-        }
-        if(!price){
-            price = data[index].price;
-        }
+        
 
 
 
@@ -228,7 +243,9 @@ async function addCardToPanier(getId,index,count,price) {
             ordersCalcule();
         afficherPanies();
          getCountOrder();
-         updateCounter()
+         updateCounter();
+         
+         
         
         }
           
@@ -262,6 +279,8 @@ function afficherPanies(){
         ordersCalcule();
         getCountOrder(); 
         updateCounter();
+        
+        
 
 
 }

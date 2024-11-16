@@ -61,4 +61,9 @@ document.addEventListener("DOMContentLoaded",()=>{
     })
 
 
+
+    document.getElementById("searchInput").onclick = ()=>{
+        location.replace("catalogue.html");
+    }
+
 })

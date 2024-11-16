@@ -1,3 +1,9 @@
+document.getElementById("searchInput").onclick = ()=>{
+    location.replace("pages/catalogue.html");
+}
+
+
+
 //pour animation publi
 const sliderContainer = document.getElementById('product-slider');
 const slides = document.querySelectorAll('.slide');

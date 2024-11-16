@@ -52,6 +52,24 @@ let special = document.getElementsByClassName("special")[0];
 let getIndexItem;
 let getpriceTotale;
 
+
+plusProduct.onclick = () => {
+  if (productCounter < maxProduct) {
+    productNumber.innerText = ++productCounter;
+  }
+};
+
+minusProduct.onclick = () => {
+  if (productCounter > minProduct) {
+    productNumber.innerText = --productCounter;
+  }
+};
+
+document.getElementById("searchInput").onclick = ()=>{
+  location.replace("catalogue.html");
+}
+
+
 async function displayInfo() {
   try {
     let getId = parseInt(localStorage.getItem("id"));
@@ -129,12 +147,11 @@ async function displayInfo() {
       const getPriceString = data[getIndex].price;
       const getPrice = parseInt(getPriceString.replace("$", ""));
 
-      let getCount = parseInt(productNumber.textContent);
 
-      let getTotale = getPrice * getCount + value1 + value2 + value3;
+      let getTotale = getPrice + value1 + value2 + value3;
 
       priceProduct.innerText = "$" + getTotale;
-      getpriceTotale = getTotale;
+      getpriceTotale = getTotale+"$";
     }
 
     function changeSelectPc() {
@@ -182,25 +199,7 @@ async function displayInfo() {
         updateTotale(getValue1, getValue2, getValue3);
       };
 
-      plusProduct.onclick = () => {
-        if (productCounter < maxProduct) {
-          productNumber.innerText = ++productCounter;
-          updateTotale();
-          categorypc1.value = "h1";
-          categorypc2.value = "g1";
-          categorypc3.value = "r1";
-        }
-      };
-
-      minusProduct.onclick = () => {
-        if (productCounter > minProduct) {
-          productNumber.innerText = --productCounter;
-          updateTotale();
-          categorypc1.value = "h1";
-          categorypc2.value = "g1";
-          categorypc3.value = "r1";
-        }
-      };
+      
     }
 
     function changeSelectPhone() {
@@ -244,25 +243,7 @@ async function displayInfo() {
         updateTotale(getValue1, getValue2, getValue3);
       };
 
-      plusProduct.onclick = () => {
-        if (productCounter < maxProduct) {
-          productNumber.innerText = ++productCounter;
-          updateTotale();
-          categoryPhone1.value = "256";
-          categoryPhone1.value = "p1";
-          categoryPhone1.value = "r1";
-        }
-      };
-
-      minusProduct.onclick = () => {
-        if (productCounter > minProduct) {
-          productNumber.innerText = --productCounter;
-          updateTotale();
-          categoryPhone1.value = "256";
-          categoryPhone1.value = "p1";
-          categoryPhone1.value = "r1";
-        }
-      };
+      
     }
 
     function changeSelectColor() {
@@ -280,21 +261,6 @@ async function displayInfo() {
         updateTotale(getValue1);
       };
 
-      plusProduct.onclick = () => {
-        if (productCounter < maxProduct) {
-          productNumber.innerText = ++productCounter;
-          updateTotale();
-          categoryColor.value = "gray";
-        }
-      };
-
-      minusProduct.onclick = () => {
-        if (productCounter > minProduct) {
-          productNumber.innerText = --productCounter;
-          updateTotale();
-          categoryColor.value = "gray";
-        }
-      };
     }
     changeSelectPc();
     changeSelectPhone();

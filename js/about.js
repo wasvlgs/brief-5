@@ -33,6 +33,10 @@ question5.addEventListener("click",()=>{
     answer5.classList.toggle("hidden");
 });
 
+document.getElementById("searchInput").onclick = ()=>{
+    location.replace("catalogue.html");
+}
+
 
 
 let slidemove = document.getElementById("slidemove");
