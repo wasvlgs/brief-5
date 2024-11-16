@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
         buttonDrop.classList.remove("rotate-90");
     };
 
-    // Carousel functionality
     const slides = document.querySelectorAll(".slide");
     let activeIndex = 0;
 
