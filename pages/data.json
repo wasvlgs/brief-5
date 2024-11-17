@@ -194,7 +194,7 @@
     "id": 11,
     "name": "Bluetooth Speaker",
     "price": "$120",
-    "description": "",
+    "description": "high quality sound",
     "image": ["https://i.pinimg.com/236x/ac/23/7f/ac237f901f52afd369df2ce53a7ed64e.jpg"],
     "category": "headphone",
     "SupplierReference": "BS120",
