@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devis - Nexio</title>
+    <meta name="description" content="Discover a wide range of high-quality electronics including smartphones, laptops, headphones, and more. Shop top brands and enjoy unbeatable deals. Fast shipping and secure checkout!">
+    <meta name="keywords" content="electronics, buy electronics online, smartphones, laptops, headphones, gadgets, best deals on electronics">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -55,7 +57,7 @@
 
 <!---------------------------------------- devis --------------------------------------------->
     <section id="Devis" class="py-8">
-    <div id="Top" class="flex justify-around m-4 items-center">
+    <div id="Top" class="flex justify-around m-4 items-center max-lg:flex-col max-lg:gap-y-5">
         <div id="Title">
             <h1 class="font-semibold text-5xl text-[#134B70] p-4">Devis</h1>
             <div id="Date-Lieu-Order" class="font-semibold text-base px-4">
@@ -64,7 +66,7 @@
             </div>
         </div>
 
-        <div id="shop-info" class="bg-gray-300 w-[500px] h-[160px] p-4 flex justify-between items-center">
+        <div id="shop-info" class="bg-gray-300 w-full p-4 flex justify-between items-center" style="max-width: 500px;min-height: 160px;">
             <div>
                 <p class="text-[#0F67B1] font-semibold">Nom de l'entreprise : <span class="text-black font-medium   ">You-Code</span></p>
                 <p class="text-[#0F67B1] font-semibold">Adresse physique :<span class="text-black font-medium">Safi, Maroc</span> </p>
@@ -83,7 +85,7 @@
     
 
     <!------------------------------------------ detail order -------------------------------------------->
-    <div id="Tableux" class="w-[80%] mx-auto">
+    <div id="Tableux" class="w-[80%] mx-auto" style="overflow: auto;">
         <table class="w-full  my-6">
             <thead class="bg-[#19AFE7] font-medium py-4">
                 <tr class="text-left">
@@ -146,7 +148,7 @@
                
             </tbody>
         </table>
-        <div class="flex justify-evenly my-6">
+        <div class="flex justify-evenly my-6 max-sm:flex-col gap-3">
             <!-- <button onclick="Imprimer('Devis')" class="bg-[#0F67B1] rounded-lg">Imprimer le Devis</button> -->
             <button id="Imprimer" class="bg-[#0F67B1] text-xl text-white  rounded-3xl p-3 hover:bg-[#19AFE7]">Imprimer le Devis</button>
             <button id="Valider" class="bg-[#0F67B1] text-xl text-white rounded-3xl p-3 hover:bg-[#19AFE7]" onclick="ouvrirModal()">Valider la Commande</button>

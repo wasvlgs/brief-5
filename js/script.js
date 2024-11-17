@@ -278,11 +278,11 @@ function afficherPanies(){
 
             ordersAfficher.innerHTML += `<div id="${panierCards[i].id}" class="itemOrders order w-full min-h-[100px]  bg-white rounded-[10px] flex  max-sm:min-h-[120px]">
                         <div class="w-[25%] h-full flex justify-center items-center p-2">
-                            <img src="${panierCards[i].image}" class="w-full h-full">
+                            <img src="${panierCards[i].image}" class="w-full h-full" style="max-height:60px">
                         </div>
                         <div class="w-[55%] h-full flex flex-col justify-center ">
-                            <h2 class="text-2xl">${panierCards[i].name}</h2>
-                            <p class="text-[10px] max-sm:text-[8px]">${panierCards[i].description}</p><div class="flex items-center gap-5"><input type="number" class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="${panierCards[i].count}"><h3 class="max-sm:hidden">${panierCards[i].RAM}/${panierCards[i].Processor}</h3>
+                            <h2 class="text-xl">${panierCards[i].name}</h2>
+                            <p class="text-[10px] max-sm:text-[8px]">${panierCards[i].description}</p><div class="flex items-center gap-5"><input type="number" class="getInputsCount w-[40px] h-50px text-lg border-2 border-black pl-[5px]" value="${panierCards[i].count}" style="margin-bottom:5px;"><h3 class="max-sm:hidden">${panierCards[i].RAM}/${panierCards[i].Processor}</h3>
                             </div>
                         </div>
                         <div  class="w-[20%] h-full flex flex-col justify-end items-end p-2">
