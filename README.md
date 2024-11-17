@@ -26,4 +26,5 @@ Cette page affiche un récapitulatif des produits achetés, avec le calcul du to
 ## Liens du projet
 
 Aperçu du projet : https://wasvlgs.github.io/brief-5/
+
 Design de l’interface utilisateur : Lien Figmahttps://www.figma.com/design/nQ7SViWwZII0gqVGQ0gKiI/Untitled?node-id=0-1&t=Kke5BjNczCWIjRDi-1
