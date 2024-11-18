@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             productCard.innerHTML = `    
                     <button id="details-button">
-                        <img src="${product.image[0]}" alt="${product.name}" class="px-4 object-fill w-screen h-[10vh] mb-4 rounded-[15px] lg:w-screen lg:px-10 lg:h-[35vh]"> 
+                        <a href="detail.html"><img onclick="toDetailProduct(${product.id})" src="${product.image[0]}" alt="${product.name}" class="px-4 object-fill w-screen h-[10vh] mb-4 rounded-[15px] lg:w-screen lg:px-10 lg:h-[35vh]"> </a>
                     </button>
                     <h3 class="text-[12px] lg:text-lg font-bold mb-2">${product.name}</h3>
                     <p class="text-gray-600 lg:mb-2 text-[12px] lg:text-lg">${product.description}</p>
